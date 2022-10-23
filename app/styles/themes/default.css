@@ -1,0 +1,17 @@
+.theme-default * {
+  --color-branding-bar: #00FFFF;
+  --color-header-background: rgb(25, 25, 25);
+  --color-sidebar-background: rgb(25, 25, 25);
+
+  --color-container-background: rgba(15, 15, 15, 0.95);
+
+  --color-control-disabled: #494949;
+  --color-control-background: black;
+  --color-control-hover: #498082;
+
+  --color-text-default: #f1f1f1;
+  --color-text-highlight: white;
+  --color-text-link: #64C8C8;
+  --color-text-link-hover: #00FFFF;
+  --color-text-subtitle: #c1c1c1;
+}

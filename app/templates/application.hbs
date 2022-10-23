@@ -1,7 +1,12 @@
-{{page-title "NewHorizonsClient"}}
+{{page-title 'New Horizons'}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<Application::Header
+  @toggleLeftSidebar={{this.toggleLeftSidebar}}
+  @toggleRightSidebar={{this.toggleRightSidebar}}
+/>
 
-{{outlet}}
+<Application::Sidebar::Left @expanded={{this.expanded}} />
+
+<div id='app-content'>
+  {{outlet}}
+</div>

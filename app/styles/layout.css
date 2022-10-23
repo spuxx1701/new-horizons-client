@@ -1,0 +1,17 @@
+:root {
+  --desktop-min-width: 768px;
+}
+
+.container {
+  background-color: var(--color-container-background);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.container>*:first-child {
+  margin-top: 0;
+}
+
+.container>*:last-child {
+  margin-bottom: 0;
+}

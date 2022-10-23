@@ -6,6 +6,14 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface Array<T> extends Ember.ArrayPrototypeExtensions<T> {}
   // interface Function extends Ember.FunctionPrototypeExtensions {}
+  type ControlSize =
+    | 'xx-small'
+    | 'x-small'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'x-large'
+    | 'xx-large';
 }
 
 export {};

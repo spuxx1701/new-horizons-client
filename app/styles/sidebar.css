@@ -1,0 +1,23 @@
+:root {
+  --sidebar-max-width: 300px;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: var(--color-sidebar-background);
+  height: 100vh;
+  width: 0px;
+  padding: calc(var(--app-header-height) + 0px) 0px 10px 0px;
+  z-index: 5;
+  transition: 500ms !important;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  background-color: transparent;
+  border-radius: 0;
+  text-align: start;
+  padding: 0px 10px 0px 10px;
+}

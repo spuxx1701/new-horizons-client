@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:200,100,400';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import "./themes/default.css";
+
+@import "./background.css";
+@import "./colors.css";
+@import "./layout.css";
+@import "./sidebar.css";
+@import "./text.css";
+
+@import "./controls/button.css";
+
+:root {
+  --app-header-height: 52px;
+}
+
+.ember-application {
+  margin: 0;
+  height: 100vh;
+}
+
+.ember-application * {
+  transition: color 200ms, background-color 200ms;
+}
+
+#app-header {
+  width: 100vw;
+  position: fixed;
+  border-top: 3px solid var(--color-branding-bar);
+  height: calc(var(--app-header-height) - 3px - 4px);
+  background-color: var(--color-header-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  z-index: 10;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#app-header h3 {
+  color: var(--color-branding-bar);
+}
+
+#app-header .button-small {
+  background-color: transparent;
+  color: var(--color-text-link);
+}
+
+#app-header .button-small:hover {
+  color: var(--color-text-link-hover);
+}
+
+#app-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: calc(var(--app-header-height) + 20px) 20px 20px;
+}
