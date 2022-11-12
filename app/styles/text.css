@@ -3,6 +3,11 @@
   src: url("/fonts/ARJULIAN.ttf");
 }
 
+@font-face {
+  font-family: Raleway;
+  src: url("/fonts/Raleway.ttf");
+}
+
 .ember-application {
   font-family: 'Raleway', Courier, monospace;
   color: var(--color-text-default);
