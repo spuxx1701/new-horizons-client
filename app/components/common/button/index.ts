@@ -30,6 +30,6 @@ export default class CommonButtonComponent extends Component<Args> {
   }
 
   get prefix() {
-    return this.args.size || 'fas';
+    return this.args.prefix || 'fas';
   }
 }
