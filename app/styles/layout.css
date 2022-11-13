@@ -6,6 +6,7 @@
   background-color: var(--color-container-background);
   border-radius: 5px;
   padding: 2rem;
+  z-index: 1;
 }
 
 .container>*:first-child {
