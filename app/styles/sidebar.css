@@ -7,7 +7,7 @@
   background-color: var(--color-sidebar-background);
   height: 100vh;
   width: 0px;
-  padding: calc(var(--app-header-height) + 0px) 0px 10px 0px;
+  padding: calc(var(--app-header-height) + 1em) 0px 10px 0px;
   z-index: 5;
   transition: 500ms !important;
   overflow-x: hidden;
@@ -15,9 +15,27 @@
   flex-direction: column;
 }
 
-.sidebar button {
+.sidebar button, .sidebar a {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border-radius: 0;
   text-align: start;
   padding: 0px 10px 0px 10px;
+  width: var(--sidebar-max-width);
+  height: 45px;
+  text-decoration: none !important;
+  color: var(--color-text-default);
+}
+
+.sidebar button svg, .sidebar a svg {
+  margin-right: 0.5rem;
+}
+
+.sidebar button:hover, .sidebar a:hover {
+  background-color: var(--color-control-hover);
+}
+
+.sidebar .active {
+  background-color: var(--color-control-active) !important;
 }

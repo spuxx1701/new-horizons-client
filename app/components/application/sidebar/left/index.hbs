@@ -1,3 +1,6 @@
 <div id='sidebar-left' class='sidebar'>
-  {{! <Application::Sidebar::Button  }}
+  <PortalTarget @name='sidebar-left' />
+  <Portal @target='sidebar-left' @renderInPlace={{true}}>
+    <Application::Sidebar::Left::Main />
+  </Portal>
 </div>
