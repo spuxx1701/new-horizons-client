@@ -41,6 +41,7 @@
 
 #app-header h3 {
   color: var(--color-branding-bar);
+  margin: auto;
 }
 
 #app-header .button-small {
