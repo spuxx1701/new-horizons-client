@@ -13,6 +13,11 @@
   color: var(--color-text-default);
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 0 1px var(--color-text-default);
+}
+
 h1 {
   /* font-family: 'ARJulian', Courier, monospace; */
   font-size: 3rem;

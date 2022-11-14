@@ -22,7 +22,7 @@
 }
 
 .ember-application * {
-  transition: color 200ms, background-color 200ms;
+  transition: color 200ms, background-color 200ms, text-shadow 200ms;
 }
 
 #app-header {
@@ -42,6 +42,7 @@
 #app-header h3 {
   color: var(--color-branding-bar);
   margin: auto;
+  text-shadow: 0 0 1px var(--color-branding-bar);
 }
 
 #app-header .button-small {

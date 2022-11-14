@@ -34,8 +34,10 @@
 
 .sidebar button:hover, .sidebar a:hover {
   background-color: var(--color-control-hover);
+  text-shadow: 0 0 1px var(--color-text-default);
 }
 
 .sidebar .active {
   background-color: var(--color-control-active) !important;
+  text-shadow: 0 0 1px var(--color-text-default);
 }
