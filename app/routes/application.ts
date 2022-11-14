@@ -1,11 +1,11 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
-import ThemeService from 'new-horizons-client/services/theme';
+import RendererService from 'new-horizons-client/services/renderer';
 
 export default class ApplicationRoute extends Route {
-  @service declare theme: ThemeService;
+  @service declare renderer: RendererService;
 
   beforeModel(): void {
-    this.theme.initialize();
+    this.renderer.initialize();
   }
 }

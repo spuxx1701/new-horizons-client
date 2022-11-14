@@ -9,7 +9,7 @@
   width: 0px;
   padding: calc(var(--app-header-height) + 1em) 0px 10px 0px;
   z-index: 5;
-  transition: 500ms !important;
+  transition: width 500ms !important;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
