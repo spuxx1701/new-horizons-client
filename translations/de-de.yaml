@@ -1,0 +1,14 @@
+misc:
+  back: Zurück
+sidebar:
+  generator:
+    preset: Voreinstellungen
+    origin: Herkunft
+    personal: Persönliches
+    attributes: Attributes
+    traits: Merkmale
+    skills: Fähigkeiten
+    abilities: Sonderfertigkeiten
+    apps: Apps
+    inventory: Inventar
+    finish: Erstellung abschließen
