@@ -8,5 +8,17 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('index', { path: '' });
-  this.route('generator', { path: 'generator' });
+  this.route('generator', function () {
+    this.route('preset');
+    this.route('origin');
+    this.route('origin-select', { path: 'origin/:reduced_origin_id' });
+    this.route('personal');
+    this.route('attributes');
+    this.route('traits');
+    this.route('skills');
+    this.route('abilities');
+    this.route('apps');
+    this.route('inventory');
+    this.route('finish');
+  });
 });
