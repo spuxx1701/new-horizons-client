@@ -12,3 +12,5 @@ sidebar:
     apps: Apps
     inventory: Inventar
     finish: Erstellung abschließen
+generator:
+  character-default-name: Neuer Charakter
