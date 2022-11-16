@@ -3,10 +3,33 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-container-background);
   border-radius: 5px;
   padding: 2rem;
   z-index: 1;
+  max-width: 100%;
+}
+
+.container-x-small {
+  width: 400px;
+}
+
+.container-small {
+  width: 500px;
+}
+
+.container-medium {
+  width: 650px;
+}
+
+.container-large {
+  width: 800px;
+}
+
+.container-max {
+  width: 100%;
 }
 
 .container>*:first-child {
