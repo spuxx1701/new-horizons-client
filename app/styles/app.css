@@ -1,3 +1,5 @@
+@import "pod-styles.css";
+
 @import "./themes/default.css";
 
 @import "./background.css";
