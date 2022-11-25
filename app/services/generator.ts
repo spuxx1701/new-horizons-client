@@ -8,7 +8,7 @@ export default class GeneratorService extends Service {
   character: CharacterGameObject | undefined;
 
   // States
-  @tracked generationInProcess = false;
+  @tracked generationInProgress = false;
   @tracked originChosen = false;
 
   // Point budgets
