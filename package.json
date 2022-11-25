@@ -76,6 +76,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-cli-typescript": "^5.1.1",
     "ember-cli-typescript-blueprints": "^3.0.0",
+    "ember-component-css": "^0.8.1",
     "ember-data": "~4.7.1",
     "ember-fetch": "^8.1.2",
     "ember-intl": "^5.7.2",
@@ -112,9 +113,11 @@
     "edition": "octane"
   },
   "lint-staged": {
-    "app/**/*.{js,ts,json,css,md}": [
+    "app/**/*.{js,ts,json}": [
       "prettier --write",
-      "eslint . --cache",
+      "eslint . --cache"
+    ],
+    "app/**/*.{hbs}": [
       "ember-template-lint ."
     ]
   }
