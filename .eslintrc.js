@@ -21,6 +21,7 @@ module.exports = {
   },
   rules: {
     'no-undef': 'off',
+    'no-console': 'warn',
   },
   overrides: [
     // node files
