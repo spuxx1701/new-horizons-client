@@ -60,6 +60,7 @@
     "@types/ember-resolver": "^5.0.11",
     "@types/qunit": "^2.19.3",
     "@types/rsvp": "^4.0.4",
+    "@typescript-eslint/parser": "^5.44.0",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^5.2.2",
     "broccoli-asset-rev": "^3.0.0",
@@ -111,6 +112,10 @@
     "edition": "octane"
   },
   "lint-staged": {
-    "app/**/*.{js,ts,json,css,md}": ["prettier --write", "eslint . --cache", "ember-template-lint ."]
+    "app/**/*.{js,ts,json,css,md}": [
+      "prettier --write",
+      "eslint . --cache",
+      "ember-template-lint ."
+    ]
   }
 }
