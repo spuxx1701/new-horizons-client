@@ -1,5 +1,6 @@
 :root {
   --desktop-min-width: 768px;
+  --default-control-height: 40px;
 }
 
 .container {

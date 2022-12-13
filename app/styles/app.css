@@ -7,6 +7,7 @@
 @import "./text.css";
 
 @import "./controls/button.css";
+@import "./controls/toggle.css";
 
 :root {
   --app-header-height: 52px;

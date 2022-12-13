@@ -1,0 +1,12 @@
+<div class='toggle'>
+  <label class='toggle-label' aria-hidden='true'>{{@label}}</label>
+  <label class='toggle-switch' aria-label={{@label}}>
+    <input
+      type='checkbox'
+      checked={{this.state}}
+      {{on 'change' this.handleChange}}
+      disabled={{this.disabled}}
+    />
+    <span class='toggle-slider'></span>
+  </label>
+</div>

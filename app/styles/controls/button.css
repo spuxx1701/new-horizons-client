@@ -2,7 +2,7 @@ button {
   border-radius: 5px;
   min-height: 45px;
   border: none;
-  background-color: var(--color-control-background);
+  background-color: var(--color-control-inactive);
   color: var(--color-text-default);
 }
 

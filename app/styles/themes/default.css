@@ -6,9 +6,11 @@
   --color-container-background: rgba(15, 15, 15, 0.95);
 
   --color-control-disabled: #494949;
-  --color-control-background: black;
+  --color-control-inactive: black;
+  --color-control-inactive-secondary: #232323;
   --color-control-hover: #498082;
   --color-control-active: #498082;
+  --color-control-active-secondary: #b1b1b1;
 
   --color-text-default: #f1f1f1;
   --color-text-highlight: white;
