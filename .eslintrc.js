@@ -13,6 +13,7 @@ module.exports = {
   plugins: ['ember'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:ember/recommended',
     'plugin:prettier/recommended',
   ],
@@ -22,6 +23,9 @@ module.exports = {
   rules: {
     'no-undef': 'off',
     'no-console': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-types': 'warn',
   },
   overrides: [
     // node files
@@ -50,6 +54,7 @@ module.exports = {
         // this can be removed once the following is fixed
         // https://github.com/mysticatea/eslint-plugin-node/issues/77
         'node/no-unpublished-require': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],
