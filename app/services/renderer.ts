@@ -1,10 +1,22 @@
-import Service from '@ember/service';
+import Service, { service } from '@ember/service';
+import LocalStorageService from './local-storage';
+
+export enum Theme {
+  default,
+  white,
+}
+
+export function isValidTheme(value: number) {
+  return Object.values(Theme).includes(value);
+}
 
 export default class RendererService extends Service {
+  @service declare localStorage: LocalStorageService;
+
   desktopMinWidth = 768;
 
   initialize() {
-    this.setTheme(this.currentTheme);
+    this.currentTheme = this.localStorage.theme;
   }
 
   get isDesktop() {
@@ -16,10 +28,11 @@ export default class RendererService extends Service {
   }
 
   get currentTheme() {
-    return 'default';
+    return this.localStorage.theme;
   }
 
-  setTheme(theme: string) {
-    document.documentElement.className = `theme-${theme}`;
+  set currentTheme(theme: Theme) {
+    this.localStorage.setTheme(theme);
+    document.documentElement.className = `theme-${Theme[theme]}`;
   }
 }

@@ -1,3 +1,7 @@
+.theme-default body {
+  background-color: black;
+}
+
 .theme-default * {
   --color-branding-bar: #00FFFF;
   --color-header-background: rgb(25, 25, 25);

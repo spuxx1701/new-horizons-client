@@ -1,0 +1,26 @@
+.theme-white body {
+  background-color: #cccccc;
+}
+
+.theme-white * {
+  --color-branding-bar: #498082;
+  --color-header-background: rgb(225, 225, 225);
+  --color-sidebar-background: rgb(225, 225, 225);
+
+  --color-container-background: rgba(225, 225, 225, 0.95);
+
+  --color-control-disabled: #494949;
+  --color-control-inactive: rgb(125, 125, 125);
+  --color-control-inactive-secondary: rgb(155, 155, 155);
+  --color-control-hover: #498082;
+  --color-control-active: #498082;
+  --color-control-active-secondary: #c5c5c5;
+
+  --color-tutorial-border: #498082;
+
+  --color-text-default: rgb(25, 25, 25);
+  --color-text-highlight: black;
+  --color-text-link: #498082;
+  --color-text-link-hover: #315758;
+  --color-text-subtitle: rgb(55, 55, 55);
+}

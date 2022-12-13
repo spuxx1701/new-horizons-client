@@ -7,6 +7,7 @@ import RendererService from 'new-horizons-client/services/renderer';
 export default class ApplicationController extends Controller {
   @service declare renderer: RendererService;
   @tracked leftSidebarExpanded = false;
+  @tracked rightSidebarExpanded = false;
 
   get sidebarExpandedWidth(): string {
     return getComputedStyle(document.documentElement).getPropertyValue(
@@ -22,7 +23,12 @@ export default class ApplicationController extends Controller {
   }
 
   @action toggleRightSidebar() {
-    // TODO: IMPLEMENT ME
+    this.rightSidebarExpanded = !this.rightSidebarExpanded;
+    const rightSidebar = document.getElementById(
+      'sidebar-right'
+    ) as HTMLElement;
+    this.toggleSidebar(rightSidebar, this.rightSidebarExpanded);
+    this.adjustContent('right', this.rightSidebarExpanded);
   }
 
   toggleSidebar(sidebar: HTMLElement, expanded: boolean) {

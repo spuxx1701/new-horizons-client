@@ -50,3 +50,8 @@
   width: calc(100% - 1rem);
   background-color: var(--color-text-default);
 }
+
+#sidebar-right {
+  direction: rtl;
+  right: 0;
+}
