@@ -6,8 +6,8 @@
   <form>
     <Common::Control::Toggle
       @label={{t 'generator.preset.show-tutorials'}}
-      @state={{this.showTutorials}}
-      @onChange={{this.toggleShowTutorials}}
+      @state={{this.localStorage.tutorialsEnabled}}
+      @onChange={{this.toggleTutorials}}
     />
     <Common::Misc::TutorialBox
       @title={{t 'generator.preset.tutorial-01.title'}}

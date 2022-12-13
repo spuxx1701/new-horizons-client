@@ -2,7 +2,7 @@
   class='tutorial-box
     {{unless this.fading "tutorial-box-visible"}}
     {{if this.closed "tutorial-box-closed"}}'
-  {{did-update this.showTutorialsDidUpdate this.tutorials.showTutorials}}
+  {{did-update this.update this.localStorage.tutorialsEnabled}}
 >
   <div class='tutorial-box-header'>
     <h6 class='tutorial-box-title'>{{@title}}</h6>
