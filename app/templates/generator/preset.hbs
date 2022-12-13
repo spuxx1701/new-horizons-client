@@ -3,5 +3,16 @@
 </Portal>
 
 <Common::Container @size='small'>
-  Bla
+  <form>
+    <Common::Control::Toggle
+      @label={{t 'generator.preset.show-tutorials'}}
+      @state={{this.showTutorials}}
+      @onChange={{this.toggleShowTutorials}}
+    />
+    <Common::Misc::TutorialBox
+      @title={{t 'generator.preset.tutorial-01.title'}}
+    >
+      {{t 'generator.preset.tutorial-01.text' htmlSafe=true}}
+    </Common::Misc::TutorialBox>
+  </form>
 </Common::Container>

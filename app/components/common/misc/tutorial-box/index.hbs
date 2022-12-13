@@ -1,0 +1,22 @@
+<div
+  class='tutorial-box
+    {{unless this.fading "tutorial-box-visible"}}
+    {{if this.closed "tutorial-box-closed"}}'
+  {{did-update this.showTutorialsDidUpdate this.tutorials.showTutorials}}
+>
+  <div class='tutorial-box-header'>
+    <h6 class='tutorial-box-title'>{{@title}}</h6>
+    <button
+      class='tutorial-box-close-button'
+      type='button'
+      {{on 'click' this.toggleContent}}
+    ><FaIcon
+        @icon={{if this.contentClosed 'chevron-down' 'chevron-up'}}
+      /></button>
+  </div>
+  <div
+    class='tutorial-box-content
+      {{unless this.contentFading "tutorial-box-content-visible"}}
+      {{if this.contentClosed "tutorial-box-content-closed"}}'
+  >{{yield}}</div>
+</div>

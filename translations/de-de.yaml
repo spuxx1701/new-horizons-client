@@ -14,3 +14,8 @@ sidebar:
     finish: Erstellung abschließen
 generator:
   character-default-name: Neuer Charakter
+  preset:
+    show-tutorials: Tutorials anzeigen
+    tutorial-01:
+      title: Tutorials
+      text: Tutorials erklären Dir die wichigsten Schritte und helfen Dir so dabei, Deinen Charakter zu erstellen. Du kanns Tutorials jederzeit ein- und ausblenden.

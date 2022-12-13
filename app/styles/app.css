@@ -9,6 +9,8 @@
 @import "./controls/button.css";
 @import "./controls/toggle.css";
 
+@import "./misc/tutorial-box.css";
+
 :root {
   --app-header-height: 52px;
   --app-content-max-width: 1200px;

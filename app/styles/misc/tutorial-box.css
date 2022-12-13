@@ -1,0 +1,58 @@
+.tutorial-box {
+  margin: 10px;
+  border: 1px solid;
+  border-image: linear-gradient(to right, transparent, var(--color-tutorial-border), transparent) 1;
+  opacity: 0;
+  transition: opacity 500ms !important;
+  overflow-y: auto;
+  padding: 5px 10px 5px 10px;
+}
+
+.tutorial-box-visible {
+  opacity: 1;
+}
+
+.tutorial-box-closed {
+  display: none;
+}
+
+.tutorial-box-header {
+  display: flex;
+  align-items: center;
+}
+
+.tutorial-box-header * {
+  margin: 0 !important;
+}
+
+.tutorial-box-close-button {
+  min-width: 30px;
+  background: none !important;
+  border: none;
+  color: var(--color-text-default);
+  margin: auto;
+  margin-right: 15px;
+}
+
+.tutorial-box-close-button:hover {
+  color: var(--color-control-active-secondary);
+}
+
+.tutorial-box-title {
+  flex-grow: 1;
+  color: var(--color-text-highlight);
+}
+
+.tutorial-box-content {
+  color: var(--colorTextDefault);
+  opacity: 0;
+  transition: opacity 500ms !important;
+}
+
+.tutorial-box-content-closed {
+  display: none;
+}
+
+.tutorial-box-content-visible {
+  opacity: 1;
+}
