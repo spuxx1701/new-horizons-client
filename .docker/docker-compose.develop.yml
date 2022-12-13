@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  new-horizons-client-develop:
+    image: 'spuxx/new-horizons-client:develop-latest'
+    restart: always
+    networks:
+      - npm
+
+networks:
+  npm:
+    external: true
