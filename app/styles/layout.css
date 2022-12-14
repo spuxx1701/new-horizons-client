@@ -70,3 +70,13 @@
 .container>*:last-child {
   margin-bottom: 0;
 }
+
+.separator {
+  margin: 0.5rem;
+  height: 2px;
+  width: calc(100% - 1rem);
+}
+
+.separator-line {
+  background-color: var(--color-text-default);
+}
