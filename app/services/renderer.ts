@@ -5,6 +5,7 @@ import LocalStorageService from './local-storage';
 export enum Theme {
   default,
   white,
+  red,
 }
 
 export function isValidTheme(value: number) {
