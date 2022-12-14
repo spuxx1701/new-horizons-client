@@ -1,0 +1,23 @@
+<div class='dropdown'>
+  <button
+    class='dropdown-toggle'
+    type='button'
+    aria-haspopup='true'
+    aria-expanded='false'
+    {{on 'click' this.toggle}}
+    {{on 'blur' this.handleBlur}}
+  >
+    {{this.caption}}
+    <FaIcon class='dropdown-toggle-icon' @icon='chevron-down' />
+  </button>
+  <div class='dropdown-menu {{if this.expanded "dropdown-menu-visible"}}'>
+    {{#each this.options as |option|}}
+      <button
+        class='dropdown-item
+          {{if (eq option this.selectedOption) "dropdown-item-selected"}}'
+        type='button'
+        {{on 'click' (fn this.handleItemClick option)}}
+      >{{option.label}}</button>
+    {{/each}}
+  </div>
+</div>
