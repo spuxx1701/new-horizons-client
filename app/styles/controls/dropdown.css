@@ -26,7 +26,14 @@
 }
 
 .dropdown-toggle-icon {
-  margin-left: 1rem;
+  width: 1rem;
+}
+
+.dropdown-toggle-caption {
+  margin: 0;
+  max-width: calc(100% - 1rem);
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .dropdown-menu {
@@ -44,6 +51,8 @@
   color: var(--color-text-default);
   min-height: 35px;
   padding: 0 8px 0 8px;
+  max-width: 100%;
+  white-space: initial;
 }
 
 .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active, .dropdown-item-selected {

@@ -10,7 +10,7 @@
       {{on 'click' this.toggle}}
       {{on 'blur' this.handleBlur}}
     >
-      {{this.caption}}
+      <p class='dropdown-toggle-caption'>{{this.caption}}</p>
       <FaIcon class='dropdown-toggle-icon' @icon='chevron-down' />
     </button>
     <div class='dropdown-menu {{if this.expanded "dropdown-menu-visible"}}'>
