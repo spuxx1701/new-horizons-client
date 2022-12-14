@@ -23,4 +23,6 @@
   --color-text-link: #00FFFF;
   --color-text-link-hover: #64C8C8;
   --color-text-subtitle: #c1c1c1;
+
+  --color-click-ripple: rgba(200, 200, 200, 0.7);
 }

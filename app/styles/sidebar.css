@@ -16,6 +16,8 @@
 }
 
 .sidebar button, .sidebar a {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   background-color: transparent;

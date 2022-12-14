@@ -9,8 +9,8 @@
 
   --color-container-background: rgba(225, 225, 225, 0.95);
 
-  --color-control-disabled: #494949;
-  --color-control-inactive: rgb(125, 125, 125);
+  --color-control-disabled: #8b8b8b;
+  --color-control-inactive: #7bc7c7;
   --color-control-inactive-secondary: rgb(155, 155, 155);
   --color-control-hover: #498082;
   --color-control-active: #498082;
@@ -23,4 +23,6 @@
   --color-text-link: #498082;
   --color-text-link-hover: #315758;
   --color-text-subtitle: rgb(55, 55, 55);
+
+  --color-click-ripple: rgba(200, 200, 200, 0.7);
 }
