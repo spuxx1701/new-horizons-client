@@ -27,7 +27,7 @@
 }
 
 .ember-application * {
-  transition: color 200ms, background-color 200ms, text-shadow 200ms;
+  transition: color 200ms, background-color 200ms, text-shadow 200ms, transform 200ms;
 }
 
 #app-header {
@@ -61,11 +61,17 @@
 
 #app-content {
   position: relative;
-  margin-left: auto;
+  margin-left: var(--app-content-left);
+  margin-right: var(--app-content-right);
+  /* margin-left: auto;
   margin-right: auto;
   left: calc(var(--app-content-left) / 2);
-  right: calc(var(--app-content-right) / 2);
-  max-width: calc(var(--app-content-max-width) - var(--app-content-left) - var(--app-content-right));
+  right: calc(var(--app-content-right) / 2); */
+  /* max-width: min(calc(100vw - var(--app-content-left)/2 - var(--app-content-right)/2), var(--app-content-max-width)); */
+  /* calc(var(--app-content-max-width) - var(--app-content-left) - var(--app-content-right)); */
+  /* max-width: min(100vw, 1200px); */
+  /* padding-left: max(0px, calc((100vw - 1200px) / 2));
+  padding-right: max(0px, calc((100vw - 1200px) / 2)); */
   transition: 500ms ease;
   padding: calc(var(--app-header-height) + 20px) 20px 20px;
 }

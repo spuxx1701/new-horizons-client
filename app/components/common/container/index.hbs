@@ -1,3 +1,7 @@
-<div class='container container-{{this.size}} align-items-{{this.align}}'>
+<div
+  class='container container-{{this.size}}
+    align-items-{{this.align}}
+    {{if @transparent "bg-transparent"}}'
+>
   {{yield}}
 </div>

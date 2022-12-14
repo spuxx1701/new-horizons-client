@@ -20,7 +20,7 @@
 
   --color-text-default: #f1f1f1;
   --color-text-highlight: white;
-  --color-text-link: #64C8C8;
-  --color-text-link-hover: #00FFFF;
+  --color-text-link: #00FFFF;
+  --color-text-link-hover: #64C8C8;
   --color-text-subtitle: #c1c1c1;
 }

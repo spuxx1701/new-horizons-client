@@ -9,6 +9,7 @@ export interface Args {
     | 'flex-end'
     | 'stretch'
     | 'inherit';
+  transparent?: boolean;
 }
 
 export default class ContainerComponent extends Component<Args> {

@@ -48,7 +48,6 @@
   margin: 0.5rem;
   height: 2px;
   width: calc(100% - 1rem);
-  background-color: var(--color-text-default);
 }
 
 #sidebar-right {

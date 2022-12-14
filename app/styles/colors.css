@@ -23,3 +23,7 @@
   --color-error: #c83232;
   --color-success: #21922b;
 }
+
+.bg-transparent {
+  background-color: transparent;
+}
