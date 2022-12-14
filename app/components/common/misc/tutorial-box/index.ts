@@ -16,7 +16,7 @@ export default class TutorialBoxComponent extends Component<Args> {
   @tracked fading = true;
   @tracked closed = true;
   @tracked contentFading = true;
-  @tracked contentClosed = false;
+  @tracked contentClosed = true;
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
@@ -35,7 +35,6 @@ export default class TutorialBoxComponent extends Component<Args> {
   }
 
   @action async show() {
-    this.contentShow();
     this.closed = false;
     await this.utility.sleep(100);
     this.fading = false;
