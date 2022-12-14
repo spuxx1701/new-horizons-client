@@ -1,6 +1,8 @@
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import RendererService from 'new-horizons-client/services/renderer';
 
 export interface DropdownOption {
   label: string;
@@ -16,6 +18,8 @@ export interface Args {
 }
 
 export default class DropdownComponent extends Component<Args> {
+  @service declare renderer: RendererService;
+
   @tracked selectedOption: DropdownOption | undefined;
   @tracked expanded = false;
 
@@ -44,7 +48,8 @@ export default class DropdownComponent extends Component<Args> {
     return this.args.size || 'medium';
   }
 
-  @action toggle() {
+  @action toggle(event: MouseEvent) {
+    this.renderer.createClickRipple(event);
     if (this.expanded) {
       this.collapse();
     } else {
