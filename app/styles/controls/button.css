@@ -1,6 +1,6 @@
 button {
   border-radius: 5px;
-  min-height: 45px;
+  min-height: var(--default-control-height);
   border: none;
   background-color: var(--color-control-inactive);
   color: var(--color-text-default);
@@ -19,7 +19,7 @@ button:disabled {
 }
 
 .button-small {
-  width: 45px;
+  width: var(--default-control-height);
   display: flex;
   align-items: center;
   justify-content: center;
