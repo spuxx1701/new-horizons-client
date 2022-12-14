@@ -1,0 +1,15 @@
+{{#if @href}}
+  <a class='card' href={{@href}} target='_blank' rel='noopener noreferrer'>
+    {{#if @icon}}
+      <FaIcon @icon={{@icon}} @prefix={{@prefix}} @size='3x' />
+    {{/if}}
+    {{yield}}
+  </a>
+{{else}}
+  <LinkTo class='card' @route={{@route}}>
+    {{#if @icon}}
+      <FaIcon @icon={{@icon}} @prefix={{@prefix}} @size='3x' />
+    {{/if}}
+    {{yield}}
+  </LinkTo>
+{{/if}}
