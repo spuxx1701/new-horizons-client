@@ -1,9 +1,11 @@
 button {
+  position: relative;
   border-radius: 5px;
   min-height: var(--default-control-height);
   border: none;
   background-color: var(--color-control-inactive);
   color: var(--color-text-default);
+  overflow: hidden;
 }
 
 button:not(:disabled) {

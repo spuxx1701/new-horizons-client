@@ -1,5 +1,7 @@
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 import Component from '@glimmer/component';
+import RendererService from 'new-horizons-client/services/renderer';
 
 export interface Args {
   type?: 'button' | 'submit';
@@ -10,15 +12,25 @@ export interface Args {
   onClick?: Function;
   disabled?: boolean;
   busy?: boolean;
+  ripple?: boolean;
 }
 
 export default class CommonButtonComponent extends Component<Args> {
+  @service declare renderer: RendererService;
+
   declare args: Args;
 
-  @action handleClick(event: any) {
+  @action handleClick(event: Event) {
+    if (this.ripple && event.currentTarget) {
+      this.renderer.createClickRipple(event as MouseEvent);
+    }
     if (typeof this.args.onClick === 'function') {
       this.args.onClick(event);
     }
+  }
+
+  get ripple() {
+    return this.args.ripple || true;
   }
 
   get disabled() {
