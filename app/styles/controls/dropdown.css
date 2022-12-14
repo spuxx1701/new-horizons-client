@@ -1,4 +1,22 @@
+.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dropdown-label {
+  flex-grow: 1;
+}
+
+.dropdown-inner {
+  position: relative;
+}
+
 .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
 }
@@ -12,6 +30,7 @@
 }
 
 .dropdown-menu {
+  width: 100%;
   border-radius: 5px;
   background-color: var(--color-control-inactive);
   padding: 0px;

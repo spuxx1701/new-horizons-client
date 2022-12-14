@@ -33,6 +33,36 @@
   width: 100%;
 }
 
+.control-x-small {
+  width: 50px;
+  max-width: 100%;
+}
+
+.control-small {
+  width: 120px;
+  max-width: 100%;
+}
+
+.control-medium {
+  width: 160px;
+  max-width: 100%;
+}
+
+.control-large {
+  width: 245px;
+  max-width: 100%;
+}
+
+.control-x-large {
+  width: 360px;
+  max-width: 100%;
+}
+
+.control-xx-large {
+  width: 490px;
+  max-width: 100%;
+}
+
 .container>*:first-child {
   margin-top: 0;
 }

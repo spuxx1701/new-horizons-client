@@ -10,7 +10,9 @@ export interface DropdownOption {
 export interface Args {
   options: DropdownOption[];
   default?: DropdownOption;
+  label?: string;
   onSelect?: Function;
+  size?: ControlSize;
 }
 
 export default class DropdownComponent extends Component<Args> {
@@ -36,6 +38,10 @@ export default class DropdownComponent extends Component<Args> {
 
   get options() {
     return this.args.options;
+  }
+
+  get size() {
+    return this.args.size || 'medium';
   }
 
   @action toggle() {
