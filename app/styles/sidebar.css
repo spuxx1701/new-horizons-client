@@ -23,8 +23,8 @@
   text-align: start;
   padding: 0px 10px 0px 10px;
   width: var(--sidebar-max-width);
-  min-height: 45px;
-  max-height: 45px;
+  min-height: var(--default-control-height);
+  max-height: var(--default-control-height);
   text-decoration: none !important;
   color: var(--color-text-default);
 }
