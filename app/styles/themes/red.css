@@ -1,28 +1,28 @@
 .theme-red body {
-  background-color: #cccccc;
+  background-color: black;
 }
 
 .theme-red * {
-  --color-branding-bar: #9b1900;
-  --color-header-background: #c47220;
-  --color-sidebar-background: #c47220;
+  --color-branding-bar: white;
+  --color-header-background: rgb(75, 5, 0, 1);
+  --color-sidebar-background: rgb(75, 5, 0, 1);
 
-  --color-container-background: rgba(225, 225, 225, 0.95);
+  --color-container-background: rgb(75, 5, 0, 0.95);
 
-  --color-control-disabled: #8b8b8b;
-  --color-control-inactive: #d48461;
+  --color-control-disabled: #494949;
+  --color-control-inactive: #9b1900;
   --color-control-inactive-secondary: rgb(155, 155, 155);
-  --color-control-hover: #9b1900;
-  --color-control-active: #9b1900;
+  --color-control-hover: red;
+  --color-control-active: red;
   --color-control-active-secondary: #c5c5c5;
 
   --color-tutorial-border: #9b1900;
 
-  --color-text-default: rgb(25, 25, 25);
-  --color-text-highlight: black;
-  --color-text-link: #9b1900;
-  --color-text-link-hover: #9b1900;
-  --color-text-subtitle: rgb(55, 55, 55);
+  --color-text-default: white;
+  --color-text-highlight: rgb(255, 220, 220);
+  --color-text-link: red;
+  --color-text-link-hover: red;
+  --color-text-subtitle: #c1c1c1;
 
   --color-click-ripple: rgba(200, 200, 200, 0.7);
 }

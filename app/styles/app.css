@@ -46,6 +46,16 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
 }
 
+#app-header-title {
+  display: flex;
+  align-items: center;
+  color: var(--color-branding-bar) !important;
+}
+
+#app-header-title svg {
+  margin-left: 0.5rem;
+}
+
 #app-header h3 {
   color: var(--color-branding-bar);
   margin: auto;
@@ -54,11 +64,11 @@
 
 #app-header .button-small {
   background-color: transparent;
-  color: var(--color-text-link);
+  color: var(--color-branding-bar);
 }
 
 #app-header .button-small:hover {
-  color: var(--color-text-link-hover);
+  color: var(--color-control-hover);
 }
 
 #app-content {

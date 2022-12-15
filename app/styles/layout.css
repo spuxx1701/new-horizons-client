@@ -3,6 +3,10 @@
   --default-control-height: 45px;
 }
 
+.flex {
+  display: flex;
+}
+
 .container {
   position: relative;
   display: flex;
