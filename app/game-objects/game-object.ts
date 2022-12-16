@@ -1,1 +1,3 @@
-export default class GameObject {}
+export default class GameObject {
+  declare id: string;
+}

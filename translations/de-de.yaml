@@ -15,7 +15,14 @@ sidebar:
 generator:
   character-default-name: Neuer Charakter
   preset:
+    preset: Voreinstellung
     show-tutorials: Tutorials anzeigen
     tutorial-01:
-      title: Tutorials
-      text: Tutorials erklären Dir die wichigsten Schritte und helfen Dir so dabei, Deinen Charakter zu erstellen. Du kanns Tutorials jederzeit ein- und ausblenden.
+      title: Was sind Tutorials?
+      text: Tutorials erklären Dir die wichigsten Schritte und helfen Dir dabei, Deinen Charakter zu erstellen. Du kannst Tutorials jederzeit ein- und ausblenden.
+    tutorial-02:
+      title: Was sind Voreinstellungen?
+      text: Zu Beginn der Charaktererstellung kannst Du zwischen verschiedenen Voreinstellungen wählen und diese auch nach Deinen Wünschen anpassen. Falls Du nicht weißt, was Du hier einstellen sollst, belasse es einfach bei den Standardeinstellungen.
+character-preset:
+  hero: Held:in
+  default: Standard
