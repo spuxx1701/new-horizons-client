@@ -62,12 +62,12 @@
   text-shadow: 0 0 1px var(--color-branding-bar);
 }
 
-#app-header .button-small {
+#app-header button {
   background-color: transparent;
   color: var(--color-branding-bar);
 }
 
-#app-header .button-small:hover {
+#app-header button:hover {
   color: var(--color-control-hover);
 }
 

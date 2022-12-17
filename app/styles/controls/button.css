@@ -1,5 +1,8 @@
 button {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   min-height: var(--default-control-height);
   border: none;
@@ -20,14 +23,11 @@ button:disabled {
   background-color: var(--color-control-disabled);
 }
 
-.button-small {
-  width: var(--default-control-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+button p {
+  margin: 0 0 0 1rem;
 }
 
-.button-small svg {
+button.control-x-small svg {
   height: 70%;
   width: 70%;
 }

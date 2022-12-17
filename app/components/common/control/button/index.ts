@@ -3,22 +3,25 @@ import { service } from '@ember/service';
 import Component from '@glimmer/component';
 import RendererService from 'new-horizons-client/services/renderer';
 
-export interface Args {
-  type?: 'button' | 'submit';
-  text?: string;
-  icon?: string;
-  prefix?: 'fas' | 'far';
-  size?: ControlSize;
-  onClick?: Function;
-  disabled?: boolean;
-  busy?: boolean;
-  ripple?: boolean;
+export interface ButtonSignature {
+  Args: {
+    type?: 'button' | 'submit';
+    class?: string;
+    text?: string;
+    icon?: string;
+    prefix?: 'fas' | 'far';
+    size?: ControlSize;
+    onClick?: Function;
+    disabled?: boolean;
+    busy?: boolean;
+    ripple?: boolean;
+  };
 }
 
-export default class CommonButtonComponent extends Component<Args> {
+export default class CommonButtonComponent extends Component<ButtonSignature> {
   @service declare renderer: RendererService;
 
-  declare args: Args;
+  declare args: ButtonSignature['Args'];
 
   @action handleClick(event: Event) {
     if (this.ripple && event.currentTarget) {
@@ -29,6 +32,10 @@ export default class CommonButtonComponent extends Component<Args> {
     }
   }
 
+  get class() {
+    return this.args.class || '';
+  }
+
   get ripple() {
     return this.args.ripple || true;
   }
@@ -37,11 +44,11 @@ export default class CommonButtonComponent extends Component<Args> {
     return this.args.busy || this.args.disabled;
   }
 
-  get size() {
-    return this.args.size || 'medium';
-  }
-
   get prefix() {
     return this.args.prefix || 'fas';
+  }
+
+  get size(): ControlSize {
+    return this.args.size || 'large';
   }
 }

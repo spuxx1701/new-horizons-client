@@ -1,8 +1,11 @@
 <button
   type={{@type}}
   {{on 'click' this.handleClick}}
-  class='button-small'
+  class='control-{{this.size}} {{this.class}}'
   disabled={{this.disabled}}
 >
   <FaIcon @icon={{@icon}} @prefix={{this.prefix}} />
+  {{#if @text}}
+    <p>{{@text}}</p>
+  {{/if}}
 </button>

@@ -18,6 +18,10 @@
   max-width: min(100%, var(--app-content-max-width));
 }
 
+.container.align-items-center>* {
+  width: 100%;
+}
+
 .container-x-small {
   width: 400px;
 }
@@ -39,33 +43,38 @@
 }
 
 .control-x-small {
-  width: 50px;
-  max-width: 100%;
+  width: var(--default-control-height);
+  max-width: min(var(--default-control-height), 100%);
 }
 
 .control-small {
   width: 120px;
-  max-width: 100%;
+  max-width: min(120, 100%);
 }
 
 .control-medium {
   width: 160px;
-  max-width: 100%;
+  max-width: min(160px, 100%);
 }
 
 .control-large {
   width: 245px;
-  max-width: 100%;
+  max-width: min(245px, 100%);
 }
 
 .control-x-large {
   width: 360px;
-  max-width: 100%;
+  max-width: min(360px, 100%);
 }
 
 .control-xx-large {
   width: 490px;
-  max-width: 100%;
+  max-width: min(490px, 100%);
+}
+
+.container>* {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .container>*:first-child {

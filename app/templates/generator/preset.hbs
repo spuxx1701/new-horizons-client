@@ -2,17 +2,28 @@
   <Application::Sidebar::Left::Generator />
 </Portal>
 
-<Common::Container @size='small'>
-  <form>
-    <Common::Control::Toggle
-      @label={{t 'generator.preset.show-tutorials'}}
-      @state={{this.localStorage.tutorialsEnabled}}
-      @onChange={{this.toggleTutorials}}
-    />
-    <Common::Misc::TutorialBox
-      @title={{t 'generator.preset.tutorial-01.title'}}
-    >
-      {{t 'generator.preset.tutorial-01.text' htmlSafe=true}}
-    </Common::Misc::TutorialBox>
-  </form>
+<Common::Container @size='small' @align='center'>
+  <Common::Control::Toggle
+    @label={{t 'generator.preset.show-tutorials'}}
+    @state={{this.localStorage.tutorialsEnabled}}
+    @onChange={{this.toggleTutorials}}
+  />
+  <Common::Misc::TutorialBox @title={{t 'generator.preset.tutorial-01.title'}}>
+    {{t 'generator.preset.tutorial-01.text'}}
+  </Common::Misc::TutorialBox>
+  <Common::Control::Dropdown
+    @options={{this.presetOptions}}
+    @onSelect={{this.handlePresetSelect}}
+    @label={{t 'generator.preset.preset'}}
+    @size='medium'
+  />
+  <Common::Misc::TutorialBox @title={{t 'generator.preset.tutorial-02.title'}}>
+    {{t 'generator.preset.tutorial-02.text' htmlSafe=true}}
+  </Common::Misc::TutorialBox>
+
+  <Common::Control::Button
+    @text={{translate 'generator.preset.submit'}}
+    @icon='play'
+    @onClick={{this.submit}}
+  />
 </Common::Container>

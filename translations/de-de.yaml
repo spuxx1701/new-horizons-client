@@ -17,6 +17,7 @@ generator:
   preset:
     preset: Voreinstellung
     show-tutorials: Tutorials anzeigen
+    submit: Erschaffung beginnen
     tutorial-01:
       title: Was sind Tutorials?
       text: Tutorials erklären Dir die wichigsten Schritte und helfen Dir dabei, Deinen Charakter zu erstellen. Du kannst Tutorials jederzeit ein- und ausblenden.
