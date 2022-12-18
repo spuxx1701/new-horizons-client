@@ -11,6 +11,7 @@
 
 @import "./controls/button.css";
 @import "./controls/dropdown.css";
+@import "./controls/input.css";
 @import "./controls/toggle.css";
 
 @import "./misc/tutorial-box.css";
@@ -29,7 +30,7 @@
 }
 
 .ember-application * {
-  transition: color 200ms, background-color 200ms, text-shadow 200ms, transform 200ms;
+  transition: color 200ms, background-color 200ms, border-color 200ms, text-shadow 200ms, transform 200ms, scale 200ms;
 }
 
 #app-header {

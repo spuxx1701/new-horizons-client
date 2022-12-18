@@ -45,7 +45,6 @@
   padding: 0px;
   border: 1px solid var(--color-control-inactive);
   box-shadow: 5px 5px 10px var(--color-control-inactive);
-  /* z-index: 2; */
 }
 
 .dropdown-menu-visible {
