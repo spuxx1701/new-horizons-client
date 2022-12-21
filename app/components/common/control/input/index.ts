@@ -28,8 +28,6 @@ export interface Signature {
 export default class InputComponent extends Component<Signature> {
   declare args: Signature['Args'];
 
-  @tracked value;
-
   constructor(owner: unknown, args: Signature['Args']) {
     super(owner, args);
     if (args.value === undefined && (!args.changeset || !args.key)) {
@@ -37,10 +35,13 @@ export default class InputComponent extends Component<Signature> {
         'The Input component expects either a value or a changeset-key-pair, but it received neither.'
       );
     }
+  }
+
+  get value() {
     if (this.args.changeset && this.args.key) {
-      this.value = this.args.changeset.get(this.args.key);
+      return this.args.changeset.get(this.args.key);
     } else {
-      this.value = this.args.value || '';
+      return this.args.value || '';
     }
   }
 
@@ -75,15 +76,15 @@ export default class InputComponent extends Component<Signature> {
 
   @action handleChange(event: InputEvent) {
     if ((event.target as HTMLInputElement).checkValidity()) {
-      this.value = (event.target as HTMLInputElement).value;
+      const value = (event.target as HTMLInputElement).value;
       if (this.args.changeset && this.args.key) {
-        this.args.changeset.set(this.args.key, this.value);
+        this.args.changeset.set(this.args.key, value);
         if (this.args.changeset.isValid) {
           this.args.changeset.save();
         }
       }
       if (this.args.onChange) {
-        this.args.onChange(this.value, event);
+        this.args.onChange(value, event);
       }
     }
   }
