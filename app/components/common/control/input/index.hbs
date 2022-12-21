@@ -1,5 +1,6 @@
-<label class='input-container'>
-  <p class='input-label'>{{@label}}
+<label class='input-outer-container'>
+  <p class='input-label'>{{@label}}</p>
+  <div class='input-inner-container'>
     {{#if @required}}
       <FaIcon
         class='input-required-marker'
@@ -7,23 +8,23 @@
         @title={{t 'misc.required-field'}}
       />
     {{/if}}
-  </p>
-  <input
-    type={{this.type}}
-    class='input-field hide-invalidity control-{{this.size}}
-      text-{{this.align}}'
-    value={{this.value}}
-    placeholder={{@placeholder}}
-    disabled={{@disabled}}
-    required={{@required}}
-    pattern={{@pattern}}
-    min={{@min}}
-    max={{@max}}
-    minLength={{@minLength}}
-    maxLength={{@maxLength}}
-    autocomplete={{@autocomplete}}
-    autocapitalize={{@autocapitalize}}
-    {{on 'input' this.handleInput}}
-    {{on 'change' this.handleChange}}
-  />
+    <input
+      type={{this.type}}
+      class='input-field hide-invalidity control-{{this.size}}
+        text-{{this.align}}'
+      value={{this.value}}
+      placeholder={{@placeholder}}
+      disabled={{@disabled}}
+      required={{@required}}
+      pattern={{@pattern}}
+      min={{@min}}
+      max={{@max}}
+      minLength={{@minLength}}
+      maxLength={{@maxLength}}
+      autocomplete={{@autocomplete}}
+      autocapitalize={{@autocapitalize}}
+      {{on 'input' this.handleInput}}
+      {{on 'change' this.handleChange}}
+    />
+  </div>
 </label>

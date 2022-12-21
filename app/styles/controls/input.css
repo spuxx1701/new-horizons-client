@@ -1,4 +1,4 @@
-.input-container {
+.input-outer-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,10 +22,12 @@ input {
 }
 
 .input-required-marker {
+  position: absolute;
   margin: 0.2rem 0 0 0.2rem;
-  height: 10px;
+  height: 8px;
   content: "*";
-  color: var(--color-text-link);
+  color: var(--color-control-active);
+  z-index: 2;
 }
 
 input::placeholder {

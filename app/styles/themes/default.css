@@ -9,7 +9,7 @@
 
   --color-container-background: rgba(15, 15, 15, 0.95);
 
-  --color-control-disabled: #494949;
+  --color-control-disabled: rgba(35, 35, 35, 0.5);
   --color-control-inactive: black;
   --color-control-inactive-secondary: #232323;
   --color-control-hover: #498082;
