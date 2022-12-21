@@ -1,5 +1,6 @@
 misc:
   back: Zurück
+  required-field: Erforderliches Feld
 sidebar:
   generator:
     preset: Voreinstellungen
