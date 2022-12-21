@@ -38,7 +38,7 @@ export default class InputComponent extends Component<Signature> {
       );
     }
     if (this.args.changeset && this.args.key) {
-      this.value = this.args.changeset[this.args.key];
+      this.value = this.args.changeset.get(this.args.key);
     } else {
       this.value = this.args.value || '';
     }
@@ -77,7 +77,7 @@ export default class InputComponent extends Component<Signature> {
     if ((event.target as HTMLInputElement).checkValidity()) {
       this.value = (event.target as HTMLInputElement).value;
       if (this.args.changeset && this.args.key) {
-        this.args.changeset[this.args.key] = this.value;
+        this.args.changeset.set(this.args.key, this.value);
         if (this.args.changeset.isValid) {
           this.args.changeset.save();
         }
