@@ -21,7 +21,7 @@ export interface Signature {
     maxLength?: number;
     autocapitalize?: string;
     autocomplete?: string;
-    align?: 'left' | 'center' | 'right';
+    align?: 'start' | 'center' | 'end';
   };
 }
 
@@ -32,6 +32,11 @@ export default class InputComponent extends Component<Signature> {
 
   constructor(owner: unknown, args: Signature['Args']) {
     super(owner, args);
+    if (args.value === undefined && (!args.changeset || !args.key)) {
+      throw new Error(
+        'The Input component expects either a value or a changeset-key-pair, but it received neither.'
+      );
+    }
     if (this.args.changeset && this.args.key) {
       this.value = this.args.changeset[this.args.key];
     } else {
@@ -56,7 +61,11 @@ export default class InputComponent extends Component<Signature> {
   }
 
   get align() {
-    return this.args.align || 'left';
+    if (this.args.type === 'number' && !this.args.align) {
+      return 'end';
+    } else {
+      return this.args.align || 'start';
+    }
   }
 
   @action handleInput(event: InputEvent) {
@@ -66,6 +75,7 @@ export default class InputComponent extends Component<Signature> {
 
   @action handleChange(event: InputEvent) {
     if ((event.target as HTMLInputElement).checkValidity()) {
+      this.value = (event.target as HTMLInputElement).value;
       if (this.args.changeset && this.args.key) {
         this.args.changeset[this.args.key] = this.value;
         if (this.args.changeset.isValid) {
@@ -73,7 +83,7 @@ export default class InputComponent extends Component<Signature> {
         }
       }
       if (this.args.onChange) {
-        this.args.onChange(event);
+        this.args.onChange(this.value, event);
       }
     }
   }
