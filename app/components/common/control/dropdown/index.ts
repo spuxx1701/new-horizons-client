@@ -1,4 +1,5 @@
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 import { service } from '@ember/service';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
@@ -19,6 +20,8 @@ export interface Args {
 
 export default class DropdownComponent extends Component<Args> {
   @service declare renderer: RendererService;
+
+  componentId = 'dropdown-' + guidFor(this);
 
   @tracked selectedOption: DropdownOption | undefined;
   @tracked expanded = false;

@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { EmberChangeset } from 'ember-changeset';
-import { tracked } from 'tracked-built-ins';
+import { guidFor } from '@ember/object/internals';
 
 export interface Signature {
   Args: {
@@ -27,6 +27,8 @@ export interface Signature {
 
 export default class InputComponent extends Component<Signature> {
   declare args: Signature['Args'];
+
+  componentId = 'input-' + guidFor(this);
 
   constructor(owner: unknown, args: Signature['Args']) {
     super(owner, args);

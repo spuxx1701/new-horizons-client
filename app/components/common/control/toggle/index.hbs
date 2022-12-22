@@ -1,7 +1,12 @@
 <div class='toggle'>
-  <label class='toggle-label' aria-hidden='true'>{{@label}}</label>
+  <label
+    class='toggle-label'
+    aria-hidden='true'
+    for='{{this.componentId}}-input'
+  >{{@label}}</label>
   <label class='toggle-switch' aria-label={{@label}}>
     <input
+      id='{{this.componentId}}-input'
       type='checkbox'
       checked={{this.state}}
       {{on 'change' this.handleChange}}

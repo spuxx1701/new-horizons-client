@@ -1,7 +1,11 @@
 <div class='dropdown'>
-  <label class='dropdown-label' aria-hidden='true'>{{@label}}</label>
+  <label
+    class='dropdown-label'
+    for='{{this.componentId}}-button'
+  >{{@label}}</label>
   <div class='dropdown-inner control-{{this.size}}'>
     <button
+      id='{{this.componentId}}-button'
       class='dropdown-toggle'
       type='button'
       aria-label={{@label}}

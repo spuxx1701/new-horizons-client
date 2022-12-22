@@ -1,4 +1,5 @@
 import { action } from '@ember/object';
+import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { EmberChangeset } from 'ember-changeset';
 
@@ -13,6 +14,8 @@ export interface Args {
 
 export default class ToggleComponent extends Component<Args> {
   declare args: Args;
+
+  componentId = 'toggle-' + guidFor(this);
 
   constructor(owner: unknown, args: Args) {
     super(owner, args);
