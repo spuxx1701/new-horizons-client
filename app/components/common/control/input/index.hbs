@@ -1,7 +1,7 @@
 <label class='input-outer-container' for='{{this.componentId}}-input'>
   <p class='input-label'>{{@label}}
     {{#if (and @infoTitle @infoText)}}
-      <Stellarpedia::InfoButton
+      <Common::Control::TooltipButton
         @title={{@infoTitle}}
         @text={{@infoText}}
         @article={{@infoArticle}}

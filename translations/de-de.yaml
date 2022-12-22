@@ -25,6 +25,12 @@ generator:
     tutorial-02:
       title: Was sind Voreinstellungen?
       text: Zu Beginn der Charaktererstellung kannst Du zwischen verschiedenen Voreinstellungen wählen und diese auch nach Deinen Wünschen anpassen. Falls Du nicht weißt, was Du hier einstellen sollst, belasse es einfach bei den Standardeinstellungen.
+    attribute-points: Attributpunkte
+    trait-points: Merkmalspunkte
+    traits-minimum: Minimum Merkmale
+    traits-maximum: Maximum Merkmale
+    abilities-maximum: Maximum Sonderfertigkeiten
+    customize: Benutzerdefiniert
 character-preset:
   hero: Held:in
   default: Standard

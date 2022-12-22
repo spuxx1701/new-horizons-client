@@ -1,0 +1,13 @@
+<button
+  type='button'
+  class='tooltip-button'
+  data-tooltip='tooltip'
+  disabled={{@disabled}}
+  {{on 'click' this.handleClick}}
+  {{on 'mouseenter' this.handleMouseEnter}}
+  {{on 'mouseleave' this.handleMouseLeave}}
+  data-toggle='tooltip'
+  data-html='true'
+>
+  <FaIcon @icon='info-circle' @prefix='fas' class='pointer-events-none' />
+</button>

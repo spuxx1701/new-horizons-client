@@ -1,26 +1,26 @@
 [
-    {
-        "id": "character-preset/default",
-        "gpBonus": 0,
-        "apAvailable": 32,
-        "traitsMin": 5,
-        "traitsMax": 15,
-        "abilitiesMax": 4,
-        "ipAvailable": 100,
-        "epStart": 0,
-        "crStart": 0,
-        "fpStart": 1
-    },
-    {
-        "id": "character-preset/hero",
-        "gpBonus": 10,
-        "apAvailable": 35,
-        "traitsMin": 5,
-        "traitsMax": 15,
-        "abilitiesMax": 6,
-        "ipAvailable": 100,
-        "epStart": 0,
-        "crStart": 0,
-        "fpStart": 2
-    }
+  {
+    "id": "character-preset/default",
+    "attributePoints": 32,
+    "traitPoints": 0,
+    "traitsMinimum": 5,
+    "traitsMaximum": 15,
+    "abilitiesMaximum": 4,
+    "interestPoints": 100,
+    "startExperience": 0,
+    "startCredits": 0,
+    "startFaithPoints": 1
+  },
+  {
+    "id": "character-preset/hero",
+    "attributePoints": 35,
+    "traitPoints": 10,
+    "traitsMinimum": 5,
+    "traitsMaximum": 15,
+    "abilitiesMaximum": 6,
+    "interestPoints": 110,
+    "startExperience": 0,
+    "startCredits": 0,
+    "startFaithPoints": 2
+  }
 ]

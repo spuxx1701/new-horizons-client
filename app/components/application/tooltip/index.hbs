@@ -1,0 +1,9 @@
+<div
+  class='tooltip-container'
+  data-tooltip='tooltip'
+  {{on 'mouseenter' this.handleMouseEnter}}
+  {{on 'mouseleave' this.handleMouseLeave}}
+>
+  <h4 data-tooltip='tooltip'>{{@title}}</h4>
+  <p data-tooltip='tooltip'>{{@text}}</p>
+</div>

@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { tracked } from '@glimmer/tracking';
+import { tracked } from 'tracked-built-ins';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { DropdownOption } from 'new-horizons-client/components/common/control/dropdown';
@@ -7,6 +7,8 @@ import { GeneratorPresetRouteModel } from 'new-horizons-client/routes/generator/
 import GeneratorService from 'new-horizons-client/services/generator';
 import LocalStorageService from 'new-horizons-client/services/local-storage';
 import UtilityService from 'new-horizons-client/services/utility';
+import CharacterPreset from 'new-horizons-client/game-objects/character-preset';
+import { EmberChangeset } from 'ember-changeset';
 
 export default class GeneratorPresetController extends Controller {
   @service declare utility: UtilityService;
@@ -15,10 +17,29 @@ export default class GeneratorPresetController extends Controller {
   @service declare localStorage: LocalStorageService;
   @service declare generator: GeneratorService;
 
-  @tracked characterPreset = this.model.characterPresets[0];
+  @tracked customize = false;
+
+  @tracked characterPreset = {
+    ...this.model.characterPresets[0],
+  } as CharacterPreset;
+
+  @tracked characterPresetChangeset: EmberChangeset = new EmberChangeset(
+    this.characterPreset as CharacterPreset
+  );
 
   @action toggleTutorials() {
     this.localStorage.setTutorialsEnabled(!this.localStorage.tutorialsEnabled);
+  }
+
+  @action handlePresetSelect(option: DropdownOption) {
+    this.characterPreset = { ...(option.data as CharacterPreset) };
+    this.characterPresetChangeset = new EmberChangeset(
+      this.characterPreset as CharacterPreset
+    );
+  }
+
+  @action toggleCustomize() {
+    this.customize = !this.customize;
   }
 
   get presetOptions() {
@@ -30,8 +51,8 @@ export default class GeneratorPresetController extends Controller {
     });
   }
 
-  @action handlePresetSelect(option: DropdownOption) {
-    this.characterPreset = option.data;
+  get inputsDisabled() {
+    return !this.customize;
   }
 
   @action submit(event: Event) {

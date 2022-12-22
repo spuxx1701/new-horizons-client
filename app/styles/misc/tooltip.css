@@ -1,0 +1,32 @@
+:root {
+  --tooltip-opacity: 0;
+  --tooltip-top: 50vh;
+  --tooltip-left: 50vw;
+}
+
+#tooltip {
+  position: absolute;
+  top: var(--tooltip-top);
+  left: var(--tooltip-left);
+  opacity: var(--tooltip-opacity);
+  background-color: var(--color-tooltip-background);
+  border-radius: 5px;
+  padding: 1rem;
+  z-index: 89;
+  max-width: min(360px, calc(100vw - 2rem));
+}
+
+.tooltip-button {
+  position: relative;
+  margin: auto 0 auto 0;
+  min-height: 1rem;
+  height: 100%;
+  max-height: 100%;
+  width: 2rem;
+  background-color: transparent !important;
+  color: var(--color-text-default);
+}
+
+.tooltip-button:not(:disabled):hover {
+  color: var(--color-control-active);
+}

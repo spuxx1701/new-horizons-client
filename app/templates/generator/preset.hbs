@@ -17,13 +17,85 @@
     @label={{t 'generator.preset.preset'}}
     @size='medium'
   />
+  <Common::Control::Toggle
+    @label={{t 'generator.preset.customize'}}
+    @state={{this.customize}}
+    @onChange={{this.toggleCustomize}}
+  />
   <Common::Misc::TutorialBox @title={{t 'generator.preset.tutorial-02.title'}}>
     {{t 'generator.preset.tutorial-02.text' htmlSafe=true}}
   </Common::Misc::TutorialBox>
 
+  <Common::Control::Input
+    @type='number'
+    @label={{t 'generator.preset.attribute-points'}}
+    @changeset={{this.characterPresetChangeset}}
+    @key='attributePoints'
+    @placeholder={{t 'generator.preset.attribute-points'}}
+    @size='small'
+    @min={{0}}
+    @max={{100}}
+    @required={{true}}
+    @disabled={{this.inputsDisabled}}
+    @infoTitle='Lorem ipsum'
+    @infoText='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+  />
+
+  <Common::Control::Input
+    @type='number'
+    @label={{t 'generator.preset.trait-points'}}
+    @changeset={{this.characterPresetChangeset}}
+    @key='traitPoints'
+    @placeholder={{t 'generator.preset.trait-points'}}
+    @size='x-small'
+    @min={{-50}}
+    @max={{50}}
+    @required={{true}}
+    @disabled={{this.inputsDisabled}}
+    @infoTitle='Bar'
+    @infoText='ed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+  />
+
+  <Common::Control::Input
+    @type='number'
+    @label={{t 'generator.preset.traits-minimum'}}
+    @changeset={{this.characterPresetChangeset}}
+    @key='traitsMinimum'
+    @size='x-small'
+    @min={{0}}
+    @max={{this.characterPreset.traitsMaximum}}
+    @required={{true}}
+    @disabled={{this.inputsDisabled}}
+  />
+
+  <Common::Control::Input
+    @type='number'
+    @label={{t 'generator.preset.traits-maximum'}}
+    @changeset={{this.characterPresetChangeset}}
+    @key='traitsMaximum'
+    @size='x-small'
+    @min={{this.characterPreset.traitsMinimum}}
+    @max={{25}}
+    @required={{true}}
+    @disabled={{this.inputsDisabled}}
+  />
+
+  <Common::Control::Input
+    @type='number'
+    @label={{t 'generator.preset.abilities-maximum'}}
+    @changeset={{this.characterPresetChangeset}}
+    @key='abilitiesMax'
+    @size='x-small'
+    @min={{this.characterPreset.traitsMinimum}}
+    @max={{25}}
+    @required={{true}}
+    @disabled={{this.inputsDisabled}}
+  />
+
   <Common::Control::Button
     @text={{translate 'generator.preset.submit'}}
     @icon='play'
+    @placeholder='Hello'
     @onClick={{this.submit}}
   />
 </Common::Container>

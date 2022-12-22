@@ -3,9 +3,11 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import RendererService from 'new-horizons-client/services/renderer';
+import TooltipService from 'new-horizons-client/services/tooltip';
 
 export default class ApplicationController extends Controller {
   @service declare renderer: RendererService;
+  @service declare tooltip: TooltipService;
   @tracked leftSidebarExpanded = false;
   @tracked rightSidebarExpanded = false;
 
@@ -13,6 +15,10 @@ export default class ApplicationController extends Controller {
     return getComputedStyle(document.documentElement).getPropertyValue(
       '--sidebar-max-width'
     );
+  }
+
+  get activeTooltip() {
+    return this.tooltip.activeTooltip;
   }
 
   @action toggleLeftSidebar() {
