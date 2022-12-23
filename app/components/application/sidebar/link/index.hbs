@@ -1,4 +1,8 @@
-<LinkTo @route={{@route}} {{on 'click' this.handleClick}} @disabled={{true}}>
+<LinkTo
+  @route={{@route}}
+  {{on 'click' this.handleClick}}
+  @disabled={{@disabled}}
+>
   {{#if @icon}}
     <FaIcon @icon={{@icon}} @prefix={{this.prefix}} />
   {{/if}}
