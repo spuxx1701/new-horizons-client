@@ -12,11 +12,11 @@ export default class TooltipComponent extends Component {
     this.tooltip.isHovering = true;
   }
 
-  @action async handleMouseLeave(event: MouseEvent) {
+  @action async handleMouseLeave() {
     this.tooltip.isHovering = false;
     await this.utility.sleep(1000);
     if (!this.tooltip.isHovering) {
-      this.tooltip.hide(event.target as HTMLElement);
+      this.tooltip.forceHide();
     }
   }
 }

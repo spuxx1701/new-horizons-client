@@ -36,7 +36,7 @@ export default class TooltipService extends Service {
     // Clicks anywhere outside the tooltip will close the tooltip
     document.addEventListener('click', (event: MouseEvent) => {
       if (!(event.target as HTMLElement).dataset['tooltip']) {
-        this._hide();
+        this.forceHide();
       }
     });
   }
@@ -63,14 +63,11 @@ export default class TooltipService extends Service {
 
   @action async hide(element: HTMLElement) {
     if (element === this.activeTooltip?.source) {
-      this.root.style.setProperty('--tooltip-opacity', '0');
-      await this.utility.sleep(200);
-      this.tooltip.hide();
-      this.activeTooltip = undefined;
+      this.forceHide();
     }
   }
 
-  async _hide() {
+  async forceHide() {
     this.root.style.setProperty('--tooltip-opacity', '0');
     await this.utility.sleep(200);
     this.tooltip.hide();
