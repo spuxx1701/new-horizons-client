@@ -1,6 +1,7 @@
 misc:
   back: Zurück
   required-field: Erforderliches Feld
+  warn-unsaved-changes: Du hast ungespeicherte Änderungen (z.B. eine begonnene Charaktererstellung oder einen Charakter, den Du gerade bearbeitest). Wenn Du die Seite verlässt, gehen diese verloren. Möchtest Du fortfahren?
 sidebar:
   generator:
     preset: Voreinstellungen
@@ -51,7 +52,7 @@ generator:
       text: Dieser Wert legt fest, mit wie vielen Schicksalspunkten Dein Charakter startet. Schicksalspunkte können während des Spiels dazu verwendet werden, misslungene Proben zu wiederholen. Während der Charaktererstellung spielen sie keine Rolle.
     customize:
       title: Benutzerdefiniert
-      text: Wenn Du möchtest, kannst Du Die alle Werte auch frei einstellen. Zuvor solltest Du Dich aber mit Deiner Spielleiter:in absprechen.
+      text: Wenn Du möchtest, kannst Du alle Werte auch frei einstellen. Zuvor solltest Du Dich aber mit Deiner Spielleiter:in absprechen.
 character-preset:
   hero: Held:in
   default: Standard

@@ -8,6 +8,7 @@ declare const config: {
   podModulePrefix: string;
   locationType: 'history' | 'hash' | 'none' | 'auto';
   rootURL: string;
+  gameVersion: string;
   APP: Record<string, unknown>;
 };
 

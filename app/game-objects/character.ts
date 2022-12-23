@@ -2,15 +2,16 @@ import { tracked } from 'tracked-built-ins';
 import GameObject from './game-object';
 
 export default class CharacterGameObject extends GameObject {
-  @tracked gameVersion = 0; // The game version that the character has been edited with last.
-  @tracked characterPreset = ''; // The id of the character preset the character has been created with.
+  @tracked gameVersion: string; // The game version that the character has been edited with last.
+  @tracked characterPresetId: string; // The id of the character preset the character has been created with.
 
   // Personal
   @tracked name = '';
 
-  constructor(gameVersion: number, name: string) {
+  constructor(gameVersion: string, characterPresetId: string, name: string) {
     super();
     this.gameVersion = gameVersion;
     this.name = name;
+    this.characterPresetId = characterPresetId;
   }
 }

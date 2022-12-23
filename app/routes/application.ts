@@ -1,13 +1,11 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
-import RendererService from 'new-horizons-client/services/renderer';
+import ManagerService from 'new-horizons-client/services/manager';
 
 export default class ApplicationRoute extends Route {
-  @service declare renderer: RendererService;
-  @service declare intl: any;
+  @service declare manager: ManagerService;
 
   beforeModel(): void {
-    this.renderer.initialize();
-    this.intl.setLocale(['de-de']);
+    this.manager.initialize();
   }
 }

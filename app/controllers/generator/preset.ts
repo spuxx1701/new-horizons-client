@@ -9,8 +9,10 @@ import LocalStorageService from 'new-horizons-client/services/local-storage';
 import UtilityService from 'new-horizons-client/services/utility';
 import CharacterPreset from 'new-horizons-client/game-objects/character-preset';
 import { EmberChangeset } from 'ember-changeset';
+import RouterService from '@ember/routing/router-service';
 
 export default class GeneratorPresetController extends Controller {
+  @service declare router: RouterService;
   @service declare utility: UtilityService;
   declare model: GeneratorPresetRouteModel;
 
@@ -53,6 +55,19 @@ export default class GeneratorPresetController extends Controller {
 
   @action submit(event: Event) {
     event.preventDefault();
-    console.log(this.characterPreset);
+    // Check whether the character preset has been customized
+    if (
+      JSON.stringify(this.characterPreset) !==
+      JSON.stringify(
+        this.model.characterPresets.find(
+          (element) => element.id === this.characterPreset.id
+        )
+      )
+    ) {
+      this.characterPreset.id = 'character-preset/custom';
+    }
+    // Start generation and navigate to origin route
+    this.generator.startGeneration(this.characterPreset);
+    this.router.transitionTo('generator.origin');
   }
 }
