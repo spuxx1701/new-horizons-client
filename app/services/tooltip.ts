@@ -11,6 +11,8 @@ export interface Tooltip {
   article?: string;
 }
 
+export const TOOLTIP_CLOSE_DELAY = 500;
+
 export default class TooltipService extends Service {
   @service declare utility: UtilityService;
 

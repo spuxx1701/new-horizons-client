@@ -1,7 +1,9 @@
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import Component from '@glimmer/component';
-import TooltipService from 'new-horizons-client/services/tooltip';
+import TooltipService, {
+  TOOLTIP_CLOSE_DELAY,
+} from 'new-horizons-client/services/tooltip';
 import UtilityService from 'new-horizons-client/services/utility';
 
 export interface Signature {
@@ -37,7 +39,7 @@ export default class TooltipButtonComponent extends Component<Signature> {
 
   @action async handleMouseLeave(event: MouseEvent) {
     this.tooltip.isHovering = false;
-    await this.utility.sleep(1000);
+    await this.utility.sleep(TOOLTIP_CLOSE_DELAY);
     if (!this.tooltip.isHovering && !this.wasClicked) {
       this.tooltip.hide(event.target as HTMLElement);
     }
