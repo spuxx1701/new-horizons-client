@@ -16,6 +16,10 @@
   max-width: min(360px, calc(100vw - 2rem));
 }
 
+.tooltip-text {
+  margin: 0;
+}
+
 .tooltip-button {
   position: relative;
   margin: auto 0 auto 0;
