@@ -14,9 +14,13 @@ sidebar:
     inventory: Inventar
     finish: Erstellung abschließen
 generator:
+  title: Neuer Charakter
   character-default-name: Neuer Charakter
   preset:
-    preset: Voreinstellung
+    title: Neuer Charakter - Voreinstellungen
+    character-preset:
+      title: Template
+      text:
     show-tutorials: Tutorials anzeigen
     submit: Erschaffung beginnen
     tutorial-01:
@@ -27,10 +31,25 @@ generator:
       text: Zu Beginn der Charaktererstellung kannst Du zwischen verschiedenen Voreinstellungen wählen und diese auch nach Deinen Wünschen anpassen. Falls Du nicht weißt, was Du hier einstellen sollst, belasse es einfach bei den Standardeinstellungen.
     attribute-points: Attributpunkte
     trait-points: Merkmalspunkte
-    traits-minimum: Minimum Merkmale
-    traits-maximum: Maximum Merkmale
-    abilities-maximum: Maximum Sonderfertigkeiten
-    customize: Benutzerdefiniert
+    traits-minimum:
+      title: Minimum Merkmale
+      text: Dieser Wert legt fest, wie viele Merkmale Du bei der Charaktererstellung mindestens erwerben musst.
+    traits-maximum:
+      title: Maximum Merkmale
+      text: Dieser Wert legt fest, wie viele Merkmale Du bei der Charaktererstellung höchstens erwerben darfst.
+    abilities-maximum:
+      title: Maximum Sonderfertigkeiten
+      text: Dieser Wert legt fest, wie viele Sonderfertigkeiten Du bei der Charaktererstellung höchstens erwerben darfst.
+    customize:
+      title: Benutzerdefiniert
+      text: Wenn Du möchtest, kannst Du
 character-preset:
   hero: Held:in
   default: Standard
+tooltip:
+  attribute-points:
+    title: Attributpunkte?
+    text: Attributpunkte werden während der Charaktererstellung zum Erhöhen von Primärattributen verwendet. Primärattribute beschreiben zum Beispiel, wie stark, geschickt oder intelligent Dein Charakter ist. Die Attributpunkte dürfen am Ende der Charaktererstellung keinen negativen Wert aufweisen.
+  trait-points:
+    title: Merkmalspunkte?
+    text: Merkmalspunkte werden während der Charaktererstellung verwendet, um Merkmale und Sonderfertigkeiten zu erwerben. Durch den Erwerb von Merkmalen mit negativen Effekten erhältst Du Merkmalspunkte, die Du dann für den Erwerb von Merkmalen mit positiven Effekten oder von Sonderfertigkeiten verwenden kannst. Die Merkmalspunkte dürfen am Ende der Charaktererstellung keinen negativen Wert aufweisen.

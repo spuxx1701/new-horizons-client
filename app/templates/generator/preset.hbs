@@ -1,3 +1,5 @@
+{{page-title (t 'generator.preset.title')}}
+
 <Portal @target='sidebar-left'>
   <Application::Sidebar::Left::Generator />
 </Portal>
@@ -14,13 +16,17 @@
   <Common::Control::Dropdown
     @options={{this.presetOptions}}
     @onSelect={{this.handlePresetSelect}}
-    @label={{t 'generator.preset.preset'}}
+    @label={{t 'generator.preset.character-preset.title'}}
     @size='medium'
+    @infoTitle={{t 'tooltip.preset.character-preset.title'}}
+    @infoText={{t 'tooltip.preset.character-preset.text'}}
   />
   <Common::Control::Toggle
-    @label={{t 'generator.preset.customize'}}
+    @label={{t 'generator.preset.customize.title'}}
     @state={{this.customize}}
     @onChange={{this.toggleCustomize}}
+    @infoTitle={{t 'tooltip.preset.customize.title'}}
+    @infoText={{t 'tooltip.preset.customize.text'}}
   />
   <Common::Misc::TutorialBox @title={{t 'generator.preset.tutorial-02.title'}}>
     {{t 'generator.preset.tutorial-02.text' htmlSafe=true}}
@@ -37,8 +43,8 @@
     @max={{100}}
     @required={{true}}
     @disabled={{this.inputsDisabled}}
-    @infoTitle='Lorem ipsum'
-    @infoText='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+    @infoTitle={{t 'tooltip.attribute-points.title'}}
+    @infoText={{t 'tooltip.attribute-points.text'}}
   />
 
   <Common::Control::Input
@@ -52,13 +58,13 @@
     @max={{50}}
     @required={{true}}
     @disabled={{this.inputsDisabled}}
-    @infoTitle='Bar'
-    @infoText='ed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.'
+    @infoTitle={{t 'tooltip.trait-points.title'}}
+    @infoText={{t 'tooltip.trait-points.text'}}
   />
 
   <Common::Control::Input
     @type='number'
-    @label={{t 'generator.preset.traits-minimum'}}
+    @label={{t 'generator.preset.traits-minimum.title'}}
     @changeset={{this.characterPresetChangeset}}
     @key='traitsMinimum'
     @size='x-small'
@@ -66,11 +72,13 @@
     @max={{this.characterPreset.traitsMaximum}}
     @required={{true}}
     @disabled={{this.inputsDisabled}}
+    @infoTitle={{t 'generator.preset.traits-minimum.title'}}
+    @infoText={{t 'generator.preset.traits-minimum.text'}}
   />
 
   <Common::Control::Input
     @type='number'
-    @label={{t 'generator.preset.traits-maximum'}}
+    @label={{t 'generator.preset.traits-maximum.title'}}
     @changeset={{this.characterPresetChangeset}}
     @key='traitsMaximum'
     @size='x-small'
@@ -78,18 +86,22 @@
     @max={{25}}
     @required={{true}}
     @disabled={{this.inputsDisabled}}
+    @infoTitle={{t 'generator.preset.traits-maximum.title'}}
+    @infoText={{t 'generator.preset.traits-maximum.text'}}
   />
 
   <Common::Control::Input
     @type='number'
-    @label={{t 'generator.preset.abilities-maximum'}}
+    @label={{t 'generator.preset.abilities-maximum.title'}}
     @changeset={{this.characterPresetChangeset}}
     @key='abilitiesMax'
     @size='x-small'
-    @min={{this.characterPreset.traitsMinimum}}
+    @min={{0}}
     @max={{25}}
     @required={{true}}
     @disabled={{this.inputsDisabled}}
+    @infoTitle={{t 'generator.preset.abilities-maximum.title'}}
+    @infoText={{t 'generator.preset.abilities-maximum.text'}}
   />
 
   <Common::Control::Button
