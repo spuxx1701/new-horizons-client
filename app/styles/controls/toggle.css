@@ -6,7 +6,13 @@
 }
 
 .toggle-label {
+  display: flex;
   flex-grow: 1;
+  margin: 0;
+}
+
+.toggle-label p {
+  margin: 0;
 }
 
 .toggle-switch {

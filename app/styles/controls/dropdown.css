@@ -5,7 +5,13 @@
 }
 
 .dropdown-label {
+  display: flex;
   flex-grow: 1;
+  margin: 0;
+}
+
+.dropdown-label p {
+  margin: 0;
 }
 
 .dropdown-inner {

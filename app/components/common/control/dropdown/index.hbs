@@ -1,8 +1,13 @@
 <div class='dropdown'>
-  <label
-    class='dropdown-label'
-    for='{{this.componentId}}-button'
-  >{{@label}}</label>
+  <label class='dropdown-label' for='{{this.componentId}}-button'><p
+    >{{@label}}</p>
+    {{#if (and @infoTitle @infoText)}}
+      <Common::Control::TooltipButton
+        @title={{@infoTitle}}
+        @text={{@infoText}}
+        @article={{@infoArticle}}
+      />
+    {{/if}}</label>
   <div class='dropdown-inner control-{{this.size}}'>
     <button
       id='{{this.componentId}}-button'

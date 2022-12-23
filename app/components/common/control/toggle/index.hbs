@@ -3,7 +3,14 @@
     class='toggle-label'
     aria-hidden='true'
     for='{{this.componentId}}-input'
-  >{{@label}}</label>
+  ><p>{{@label}}</p>
+    {{#if (and @infoTitle @infoText)}}
+      <Common::Control::TooltipButton
+        @title={{@infoTitle}}
+        @text={{@infoText}}
+        @article={{@infoArticle}}
+      />
+    {{/if}}</label>
   <label class='toggle-switch' aria-label={{@label}}>
     <input
       id='{{this.componentId}}-input'
