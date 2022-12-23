@@ -8,7 +8,7 @@ export default class GeneratorRoute extends Route {
   @service declare router: RouterService;
 
   redirect(): void {
-    if (this.generator.generationInProgress) {
+    if (this.generator.state !== 'preset') {
       this.router.transitionTo('generator.generator.origin');
     } else {
       this.router.transitionTo('generator.preset');

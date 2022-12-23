@@ -7,8 +7,8 @@
     "traitsMaximum": 15,
     "abilitiesMaximum": 4,
     "interestPoints": 100,
+    "bonusCredits": 0,
     "startExperience": 0,
-    "startCredits": 0,
     "startFaithPoints": 1
   },
   {
@@ -19,8 +19,8 @@
     "traitsMaximum": 15,
     "abilitiesMaximum": 6,
     "interestPoints": 110,
+    "bonusCredits": 0,
     "startExperience": 0,
-    "startCredits": 0,
     "startFaithPoints": 2
   }
 ]

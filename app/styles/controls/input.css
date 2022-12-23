@@ -31,7 +31,7 @@ input {
 }
 
 input::placeholder {
-  color: var(--color-text-subtitle) !important;
+  color: var(--color-text-subtle) !important;
 }
 
 input:not(:disabled):hover, input:not(:disabled):focus {
@@ -40,6 +40,7 @@ input:not(:disabled):hover, input:not(:disabled):focus {
 }
 
 input:disabled {
+  color: var(--color-text-subtle);
   background-color: var(--color-control-disabled);
 }
 

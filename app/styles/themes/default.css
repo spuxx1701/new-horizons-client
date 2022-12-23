@@ -9,7 +9,7 @@
 
   --color-container-background: rgba(15, 15, 15, 0.95);
 
-  --color-control-disabled: rgba(35, 35, 35, 0.5);
+  --color-control-disabled: rgba(35, 35, 35, 0.7);
   --color-control-inactive: black;
   --color-control-inactive-secondary: #232323;
   --color-control-hover: #498082;
@@ -23,7 +23,7 @@
   --color-text-highlight: white;
   --color-text-link: #00FFFF;
   --color-text-link-hover: #64C8C8;
-  --color-text-subtitle: #c1c1c1;
+  --color-text-subtle: #adadad;
 
   --color-click-ripple: rgba(200, 200, 200, 0.7);
 }

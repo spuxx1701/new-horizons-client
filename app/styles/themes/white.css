@@ -23,7 +23,7 @@
   --color-text-highlight: black;
   --color-text-link: #498082;
   --color-text-link-hover: #315758;
-  --color-text-subtitle: rgb(55, 55, 55);
+  --color-text-subtle: rgb(55, 55, 55);
 
   --color-click-ripple: rgba(200, 200, 200, 0.7);
 }

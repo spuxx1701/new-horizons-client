@@ -51,10 +51,6 @@ export default class GeneratorPresetController extends Controller {
     });
   }
 
-  get inputsDisabled() {
-    return !this.customize;
-  }
-
   @action submit(event: Event) {
     event.preventDefault();
     console.log(this.characterPreset);

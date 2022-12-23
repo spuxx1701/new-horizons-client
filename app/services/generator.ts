@@ -7,12 +7,10 @@ export default class GeneratorService extends Service {
 
   character: CharacterGameObject | undefined;
 
-  // States
-  @tracked generationInProgress = false;
-  @tracked originChosen = false;
+  @tracked state: 'preset' | 'origin' | 'post-origin' = 'preset';
 
   // Point budgets
-  @tracked attributePointsAvailable = 0;
+  @tracked attributePoints = 0;
 
   startGeneration() {
     this.character = new CharacterGameObject(

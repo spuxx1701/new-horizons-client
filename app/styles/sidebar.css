@@ -31,12 +31,18 @@
   color: var(--color-text-default);
 }
 
+.sidebar a+.disabled {
+  pointer-events: none;
+  color: var(--color-text-subtle);
+  background-color: var(--color-control-disabled);
+}
+
 .sidebar button svg, .sidebar a svg {
   margin-right: 0.5rem;
   min-width: 1.5rem;
 }
 
-.sidebar button:hover, .sidebar a:hover {
+.sidebar button:not(:disabled):hover, .sidebar a:not(.disabled):hover {
   background-color: var(--color-control-hover);
   text-shadow: 0 0 1px var(--color-text-default);
 }

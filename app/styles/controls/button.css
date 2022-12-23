@@ -20,6 +20,7 @@ button:not(:disabled):hover {
 }
 
 button:disabled {
+  color: var(--color-text-subtle);
   background-color: var(--color-control-disabled);
 }
 
