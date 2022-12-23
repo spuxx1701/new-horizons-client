@@ -9,7 +9,7 @@ export default class GeneratorRoute extends Route {
 
   redirect(): void {
     if (this.generator.state !== 'preset') {
-      this.router.transitionTo('generator.generator.origin');
+      this.router.transitionTo('generator.origin');
     } else {
       this.router.transitionTo('generator.preset');
     }
