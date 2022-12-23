@@ -58,9 +58,28 @@ export default class TooltipService extends Service {
   positionAtElement(element: HTMLElement) {
     const elementRect = element.getBoundingClientRect();
     const top = elementRect.top;
+    const bottom = window.innerHeight - elementRect.bottom;
     const left = elementRect.left;
-    this.root.style.setProperty('--tooltip-top', `calc(${top}px + 2rem)`);
-    this.root.style.setProperty('--tooltip-left', `calc(${left}px + 2rem)`);
+    const right = window.innerWidth - elementRect.right;
+    // Position the tooltip depending on the element's location within the viewport
+    // so that the tooltip is less likely to reach outside of the viewport
+    if (top <= window.innerHeight / 2) {
+      this.root.style.setProperty('--tooltip-top', `calc(${top}px + 2rem)`);
+      this.root.style.setProperty('--tooltip-bottom', 'auto');
+    } else {
+      this.root.style.setProperty('--tooltip-top', 'auto');
+      this.root.style.setProperty(
+        '--tooltip-bottom',
+        `calc(${bottom}px + 2rem)`
+      );
+    }
+    if (left <= window.innerWidth / 2) {
+      this.root.style.setProperty('--tooltip-left', `${left}px`);
+      this.root.style.setProperty('--tooltip-right', `auto`);
+    } else {
+      this.root.style.setProperty('--tooltip-left', `auto`);
+      this.root.style.setProperty('--tooltip-right', `${right}px`);
+    }
   }
 
   @action async hide(element: HTMLElement) {

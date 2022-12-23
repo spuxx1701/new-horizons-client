@@ -1,13 +1,17 @@
 :root {
   --tooltip-opacity: 0;
-  --tooltip-top: 50vh;
-  --tooltip-left: 50vw;
+  --tooltip-top: auto;
+  --tooltip-top: auto;
+  --tooltip-left: auto;
+  --tooltip-right: auto;
 }
 
 #tooltip {
   position: absolute;
   top: var(--tooltip-top);
+  bottom: var(--tooltip-bottom);
   left: var(--tooltip-left);
+  right: var(--tooltip-right);
   opacity: var(--tooltip-opacity);
   background-color: var(--color-tooltip-background);
   border-radius: 5px;
