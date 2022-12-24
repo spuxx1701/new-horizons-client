@@ -1,4 +1,4 @@
-<div class='dropdown'>
+<div class='dropdown {{unless @label "no-label"}}'>
   <label class='dropdown-label' for='{{this.componentId}}-button'><p
     >{{@label}}</p>
     {{#if (and @infoTitle @infoText)}}
