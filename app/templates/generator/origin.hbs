@@ -1,3 +1,23 @@
+{{page-title (t 'generator.origin.title')}}
+
 <Portal @target='sidebar-left'>
   <Application::Sidebar::Left::Generator />
 </Portal>
+
+<Common::Container
+  @size='large'
+  @align='center'
+  @title={{t 'generator.origin.title'}}
+>
+  <Common::Control::Dropdown
+    @options={{this.originOptions}}
+    @onSelect={{this.handleOriginSelect}}
+    @size='x-large'
+  />
+
+  <Common::Control::Button
+    @text={{translate 'generator.origin.submit'}}
+    @icon='globe'
+    @onClick={{this.submit}}
+  />
+</Common::Container>

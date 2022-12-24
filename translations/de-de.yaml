@@ -17,6 +17,9 @@ sidebar:
 generator:
   title: Neuer Charakter
   character-default-name: Neuer Charakter
+  origin:
+    title: Wähle Deine Herkunft
+    submit: Herkunft wählen
   preset:
     title: Voreinstellungen
     character-preset:
@@ -56,6 +59,18 @@ generator:
 character-preset:
   hero: Held:in
   default: Standard
+origin:
+  ceres: Kolonie Ceres
+  codex-moons: Silbernes Reich - Minenkolonien
+  codex-triton: Silbernes Reich - Triton
+  earth-rural: Erde - Abseits der Städte
+  earth-urban: Erde - Großstädte und Raumstationen
+  europa: Republik Europa
+  ganymede: Kolonie Ganymed
+  mars: Kolonie Mars
+  miranda: Trümmerstadt Miranda
+  titan: Kolonie Titan
+  venus: Kolonie Venus
 tooltip:
   attribute-points:
     title: Attributpunkte
