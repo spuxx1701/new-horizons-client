@@ -7,7 +7,7 @@ import { GeneratorPresetRouteModel } from 'new-horizons-client/routes/generator/
 import GeneratorService from 'new-horizons-client/services/generator';
 import LocalStorageService from 'new-horizons-client/services/local-storage';
 import UtilityService from 'new-horizons-client/services/utility';
-import CharacterPreset from 'new-horizons-client/game-objects/character-preset';
+import CharacterPreset from 'new-horizons-client/game-objects/character/character-preset';
 import { EmberChangeset } from 'ember-changeset';
 import RouterService from '@ember/routing/router-service';
 

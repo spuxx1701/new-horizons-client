@@ -1,4 +1,4 @@
-import GameObject from './game-object';
+import GameObject from '../game-object';
 
 export default class SecondaryAttribute extends GameObject {
   declare current: number;
@@ -6,4 +6,9 @@ export default class SecondaryAttribute extends GameObject {
   declare bonus: number;
   declare primaryAttributes: string[];
   declare div: number;
+
+  constructor(init: Partial<SecondaryAttribute>) {
+    super();
+    Object.assign(this, init);
+  }
 }

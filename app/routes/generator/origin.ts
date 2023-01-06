@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import RouterService from '@ember/routing/router-service';
 import { service } from '@ember/service';
-import Origin from 'new-horizons-client/game-objects/origin';
+import Origin from 'new-horizons-client/game-objects/character/origin';
 import DatabaseService from 'new-horizons-client/services/database';
 import GeneratorService from 'new-horizons-client/services/generator';
 import RSVP from 'rsvp';

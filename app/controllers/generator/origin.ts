@@ -4,7 +4,7 @@ import RouterService from '@ember/routing/router-service';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { DropdownOption } from 'new-horizons-client/components/common/control/dropdown';
-import Origin from 'new-horizons-client/game-objects/origin';
+import Origin from 'new-horizons-client/game-objects/character/origin';
 import { GeneratorOriginRouteModel } from 'new-horizons-client/routes/generator/origin';
 import GeneratorService from 'new-horizons-client/services/generator';
 import UtilityService from 'new-horizons-client/services/utility';

@@ -14,6 +14,22 @@ declare global {
     | 'large'
     | 'x-large'
     | 'xx-large';
+
+  type CollectionName =
+    | 'ability-category'
+    | 'ability'
+    | 'app-category'
+    | 'app'
+    | 'character-preset'
+    | 'item'
+    | 'origin'
+    | 'pri-a'
+    | 'sec-a'
+    | 'skill-category'
+    | 'skill'
+    | 'specialisation'
+    | 'trait'
+    | 'weight-modifier';
 }
 
 export {};

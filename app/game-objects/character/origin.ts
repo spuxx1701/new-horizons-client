@@ -1,4 +1,4 @@
-import GameObject from './game-object';
+import GameObject from '../game-object';
 
 export interface SkillFixed {
   id: string;
@@ -15,4 +15,9 @@ export default class Origin extends GameObject {
   declare specialPA: string;
   declare skillsFixed: SkillFixed[];
   declare skillOptions: SkillOption[];
+
+  constructor(init: Partial<Origin>) {
+    super();
+    Object.assign(this, init);
+  }
 }

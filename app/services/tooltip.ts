@@ -63,7 +63,7 @@ export default class TooltipService extends Service {
     const right = window.innerWidth - elementRect.right;
     // Position the tooltip depending on the element's location within the viewport
     // so that the tooltip is less likely to reach outside of the viewport
-    if (top <= window.innerHeight / 2) {
+    if (top <= window.innerHeight * 0.6) {
       this.root.style.setProperty('--tooltip-top', `calc(${top}px + 2rem)`);
       this.root.style.setProperty('--tooltip-bottom', 'auto');
     } else {
@@ -73,7 +73,7 @@ export default class TooltipService extends Service {
         `calc(${bottom}px + 2rem)`
       );
     }
-    if (left <= window.innerWidth / 2) {
+    if (left <= window.innerWidth * 0.6) {
       this.root.style.setProperty('--tooltip-left', `${left}px`);
       this.root.style.setProperty('--tooltip-right', `auto`);
     } else {

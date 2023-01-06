@@ -1,4 +1,4 @@
-import GameObject from './game-object';
+import GameObject from '../game-object';
 
 export default class CharacterPreset extends GameObject {
   declare gpBonus: number;
@@ -9,4 +9,9 @@ export default class CharacterPreset extends GameObject {
   declare epStart: number;
   declare crStart: number;
   declare fpStart: number;
+
+  constructor(init: Partial<CharacterPreset>) {
+    super();
+    Object.assign(this, init);
+  }
 }

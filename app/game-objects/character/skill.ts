@@ -1,4 +1,4 @@
-import GameObject from './game-object';
+import GameObject from '../game-object';
 
 export default class Skill extends GameObject {
   declare skillCategory: string;
@@ -11,4 +11,9 @@ export default class Skill extends GameObject {
   declare hasSpecialisations: boolean;
   declare isBasic: boolean;
   declare baseValue: number;
+
+  constructor(init: Partial<Skill>) {
+    super();
+    Object.assign(this, init);
+  }
 }

@@ -60,6 +60,7 @@
     "@types/ember-data__store": "^4.0.1",
     "@types/ember-resolver": "^5.0.11",
     "@types/rsvp": "^4.0.4",
+    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.44.0",
     "babel-eslint": "^10.1.0",
@@ -118,5 +119,8 @@
     "app/**/*.{hbs}": [
       "ember-template-lint ."
     ]
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
