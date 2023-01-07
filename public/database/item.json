@@ -25,7 +25,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/ammunation/ab-c35",
@@ -53,7 +53,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/ammunation/ab-c50",
@@ -81,7 +81,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/ammunation/ab-c75",
@@ -109,7 +109,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/ammunation/ab-g50",
@@ -137,7 +137,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/ammunation/ab-g75",
@@ -165,7 +165,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_Decoy_Flare",
@@ -193,7 +193,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_Decoy_PlasmaCapsule",
@@ -221,7 +221,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_c19",
@@ -249,7 +249,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_c25",
@@ -277,7 +277,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_c35",
@@ -305,7 +305,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_c50",
@@ -333,7 +333,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_c75",
@@ -361,7 +361,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_g35",
@@ -389,7 +389,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_g50",
@@ -417,7 +417,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_FMJ_g75",
@@ -445,7 +445,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_c25",
@@ -473,7 +473,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_c35",
@@ -501,7 +501,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_c50",
@@ -529,7 +529,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_c75",
@@ -557,7 +557,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_g35",
@@ -585,7 +585,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_g50",
@@ -613,7 +613,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_HP_g75",
@@ -641,7 +641,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MAG_c100",
@@ -669,7 +669,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MAG_c35",
@@ -697,7 +697,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MAG_c50",
@@ -725,7 +725,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MAG_c75",
@@ -753,7 +753,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MFC_large",
@@ -781,7 +781,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Ammunition_MFC_small",
@@ -809,7 +809,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/arma-titanis-arms",
@@ -840,7 +840,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/arma-titanis-helmet",
@@ -871,7 +871,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/arma-titanis-legs",
@@ -902,7 +902,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/arma-titanis-torso",
@@ -933,7 +933,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/behring-mirror-arms",
@@ -964,7 +964,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/behring-mirror-helmet",
@@ -995,7 +995,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/behring-mirror-legs",
@@ -1026,7 +1026,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/behring-mirror-torso",
@@ -1057,7 +1057,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/lwfn7-arms",
@@ -1088,7 +1088,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/lwfn7-helmet",
@@ -1119,7 +1119,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/lwfn7-legs",
@@ -1150,7 +1150,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/lwfn7-torso",
@@ -1181,7 +1181,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/marsian-red-plate-arms",
@@ -1212,7 +1212,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/marsian-red-plate-helmet",
@@ -1243,7 +1243,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/marsian-red-plate-legs",
@@ -1274,7 +1274,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/marsian-red-plate-torso",
@@ -1305,7 +1305,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/armor/pilot-suit-omega-space-suit",
@@ -1336,7 +1336,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/dress-average",
@@ -1361,7 +1361,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/dress-cheap",
@@ -1386,7 +1386,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/DressExpensive",
@@ -1411,7 +1411,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/JacketAverage",
@@ -1436,7 +1436,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/JacketCheap",
@@ -1461,7 +1461,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/JacketExpensive",
@@ -1486,7 +1486,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/PantsAverage",
@@ -1511,7 +1511,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/PantsCheap",
@@ -1536,7 +1536,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/PantsExpensive",
@@ -1561,7 +1561,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShirtAverage",
@@ -1586,7 +1586,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShirtCheap",
@@ -1611,7 +1611,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShirtExpensive",
@@ -1636,7 +1636,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShoesAverage",
@@ -1661,7 +1661,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShoesCheap",
@@ -1686,7 +1686,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/ShoesExpensive",
@@ -1711,7 +1711,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/SuitAverage",
@@ -1736,7 +1736,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/SuitCheap",
@@ -1761,7 +1761,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/clothing/SuitExpensive",
@@ -1786,7 +1786,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Consumable_FirstAidBox",
@@ -1811,7 +1811,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": { "uses": 5, "maxUses": 5 },
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Consumable_FirstAidSet",
@@ -1836,7 +1836,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": { "uses": 3, "maxUses": 3 },
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Consumable_SuppliesAverage",
@@ -1861,7 +1861,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Consumable_SuppliesCheap",
@@ -1886,7 +1886,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Consumable_SuppliesExpensive",
@@ -1911,7 +1911,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/generla/ar-visor",
@@ -1936,7 +1936,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_BackpackLarge",
@@ -1961,7 +1961,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_BackpackMedium",
@@ -1986,7 +1986,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_BackpackSmall",
@@ -2011,7 +2011,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_CampingDishes",
@@ -2036,7 +2036,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_Canteen",
@@ -2061,7 +2061,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_Flashlight",
@@ -2086,7 +2086,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_GasCartridge",
@@ -2111,7 +2111,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_GasCooker",
@@ -2136,7 +2136,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_MicroFusionCooker",
@@ -2161,7 +2161,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_Mobi",
@@ -2186,7 +2186,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_SleepingBagThick",
@@ -2211,7 +2211,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_SleepingBagThin",
@@ -2236,7 +2236,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_General_Washbag",
@@ -2261,7 +2261,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "Item_Resource_Aluminium",
@@ -2286,7 +2286,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_AluminiumAlloy",
@@ -2311,7 +2311,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Beryllium",
@@ -2336,7 +2336,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Chrome",
@@ -2361,7 +2361,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Cobalt",
@@ -2386,7 +2386,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Copper",
@@ -2411,7 +2411,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_CopperBerylliumAlloy",
@@ -2436,7 +2436,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Diamond",
@@ -2461,7 +2461,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_ElectronicComponents",
@@ -2486,7 +2486,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Glass",
@@ -2511,7 +2511,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Gold",
@@ -2536,7 +2536,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Hydrogen",
@@ -2561,7 +2561,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Iridium",
@@ -2586,7 +2586,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Iron",
@@ -2611,7 +2611,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Lithium",
@@ -2636,7 +2636,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Luminant",
@@ -2661,7 +2661,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_MechanicComponents",
@@ -2686,7 +2686,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Molybdenum",
@@ -2711,7 +2711,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Nickel",
@@ -2736,7 +2736,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_NickelBasicAlloy",
@@ -2761,7 +2761,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Niobium",
@@ -2786,7 +2786,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Oxygen",
@@ -2811,7 +2811,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Plastics",
@@ -2836,7 +2836,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_ScrapMetal",
@@ -2861,7 +2861,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Silicon",
@@ -2886,7 +2886,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Silver",
@@ -2911,7 +2911,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Titanium",
@@ -2936,7 +2936,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Vitallium",
@@ -2961,7 +2961,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Water",
@@ -2986,7 +2986,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "Item_Resource_Xenon",
@@ -3011,7 +3011,7 @@
     "isStackable": true,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": 1000
+    "valuePerWeightUnit": 1000
   },
   {
     "id": "item/weapon-ranged/automatic/be3-u47",
@@ -3075,7 +3075,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/automatic/lwf-kiara",
@@ -3139,7 +3139,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/automatic/lwf-viper",
@@ -3203,7 +3203,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/automatic/twt-desert-fox",
@@ -3263,7 +3263,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/pistol/euro-b4",
@@ -3323,7 +3323,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/pistol/lwf-ld35",
@@ -3383,7 +3383,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/pistol/takashi-app3",
@@ -3443,7 +3443,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/pistol/twt-hand-cannon",
@@ -3503,7 +3503,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/pistol/lwf-orthrus",
@@ -3563,7 +3563,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/shotgun/red-golden-boy",
@@ -3623,7 +3623,7 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   },
   {
     "id": "item/weapon-ranged/shotgun/vcr-506",
@@ -3683,6 +3683,6 @@
     "isStackable": false,
     "amount": 1,
     "consumable": null,
-    "valuePerWeight": null
+    "valuePerWeightUnit": null
   }
 ]

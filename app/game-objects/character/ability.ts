@@ -1,8 +1,15 @@
 import GameObject from '../game-object';
-import { Option, Requirement, Target } from './types';
+import {
+  AppBaseAbility,
+  AppBaseSkill,
+  Option,
+  Requirement,
+  Target,
+} from './types';
 
 export default class Ability extends GameObject {
-  declare abilityCategory: string;
+  declare baseAbility: AppBaseAbility;
+  declare baseSkill: AppBaseSkill;
   declare editorOnly: boolean;
   declare requirements: Requirement[];
   declare needsInput: boolean;

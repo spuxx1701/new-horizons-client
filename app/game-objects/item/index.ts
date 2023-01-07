@@ -1,6 +1,7 @@
 import GameObject from '../game-object';
 import {
   Ammunition,
+  Armor,
   Consumable,
   Durability,
   MeleeCombat,
@@ -24,7 +25,7 @@ export default class Item extends GameObject {
   declare ammo: Ammunition | null;
   declare armor: Armor | null;
   declare consumable: Consumable | null;
-  declare valuePerWeight: number | null;
+  declare valuePerWeightUnit: number | null;
 
   constructor(init: Partial<Item>) {
     super();

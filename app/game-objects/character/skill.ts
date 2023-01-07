@@ -1,7 +1,8 @@
 import GameObject from '../game-object';
+import { SkillCategory } from './types';
 
 export default class Skill extends GameObject {
-  declare skillCategory: string;
+  declare skillCategory: SkillCategory;
   declare factor: number;
   declare constraint: number;
   declare current: number;
