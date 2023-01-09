@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 import { Option, Requirement, Restriction, Target } from './types';
 
@@ -16,8 +17,8 @@ export default class Trait extends GameObject {
   declare requirements: Requirement[];
   declare restrictions: Restriction[];
 
-  constructor(init: Partial<Trait>) {
-    super();
+  constructor(context: EmberObject, init: Partial<Trait>) {
+    super(context);
     Object.assign(this, init);
   }
 }

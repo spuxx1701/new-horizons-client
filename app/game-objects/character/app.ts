@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 import { Requirement } from './types';
 
@@ -9,8 +10,8 @@ export default class App extends GameObject {
   declare max: number;
   declare requirements: Requirement[];
 
-  constructor(init: Partial<App>) {
-    super();
+  constructor(context: EmberObject, init: Partial<App>) {
+    super(context);
     Object.assign(this, init);
   }
 }

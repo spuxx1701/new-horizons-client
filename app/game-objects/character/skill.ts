@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 import { SkillCategory } from './types';
 
@@ -13,8 +14,8 @@ export default class Skill extends GameObject {
   declare isBasic: boolean;
   declare baseValue: number;
 
-  constructor(init: Partial<Skill>) {
-    super();
+  constructor(context: EmberObject, init: Partial<Skill>) {
+    super(context);
     Object.assign(this, init);
   }
 }

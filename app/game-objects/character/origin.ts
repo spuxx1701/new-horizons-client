@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 
 export interface SkillFixed {
@@ -16,8 +17,8 @@ export default class Origin extends GameObject {
   declare skillsFixed: SkillFixed[];
   declare skillOptions: SkillOption[];
 
-  constructor(init: Partial<Origin>) {
-    super();
+  constructor(context: EmberObject, init: Partial<Origin>) {
+    super(context);
     Object.assign(this, init);
   }
 }

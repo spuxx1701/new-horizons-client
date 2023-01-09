@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 import {
   AppBaseAbility,
@@ -24,8 +25,8 @@ export default class Ability extends GameObject {
   declare costs: number;
   declare targets: Target[];
 
-  constructor(init: Partial<Ability>) {
-    super();
+  constructor(context: EmberObject, init: Partial<Ability>) {
+    super(context);
     Object.assign(this, init);
   }
 }

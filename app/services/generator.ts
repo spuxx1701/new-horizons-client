@@ -3,11 +3,13 @@ import { tracked } from '@glimmer/tracking';
 import CharacterPreset from 'new-horizons-client/game-objects/character/character-preset';
 import ENV from 'new-horizons-client/config/environment';
 import Origin from 'new-horizons-client/game-objects/character/origin';
-import Character from 'new-horizons-client/game-objects/character';
+import Character from 'new-horizons-client/game-objects/character/character';
 import UtilityService from './utility';
 import DatabaseService from './database';
+import LoggerService from './logger';
 
 export default class GeneratorService extends Service {
+  @service declare logger: LoggerService;
   @service declare database: DatabaseService;
   @service declare intl: any;
   @service declare utility: UtilityService;
@@ -27,15 +29,21 @@ export default class GeneratorService extends Service {
   async startGeneration(characterPreset: CharacterPreset) {
     // Initialize character
     this.character = new Character(
+      this,
       this.utility.getUuid(),
       ENV.gameVersion,
       characterPreset.id,
       this.intl.t('generator.character-default-name')
     );
     await this.initializeAttributes();
+    this.logger.log(
+      `Attributes initialized for character ${this.character.getCharacterNameAndId()}.`,
+      { context: this.constructor.name }
+    );
     await this.initializeSkills();
     // Set proper state
     this.state = 'origin';
+    console.log(this.character);
   }
 
   /**
@@ -46,6 +54,10 @@ export default class GeneratorService extends Service {
     const primaryAttributes = await this.database.getPrimaryAttributes();
     for (const primaryAttribute of primaryAttributes) {
       primaryAttribute.addToCharacter(this.character as Character);
+    }
+    const secondaryAttributes = await this.database.getSecondaryAttributes();
+    for (const secondaryAttribute of secondaryAttributes) {
+      secondaryAttribute.addToCharacter(this.character as Character);
     }
   }
 

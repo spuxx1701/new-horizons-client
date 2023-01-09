@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 import {
   Ammunition,
@@ -27,8 +28,8 @@ export default class Item extends GameObject {
   declare consumable: Consumable | null;
   declare valuePerWeightUnit: number | null;
 
-  constructor(init: Partial<Item>) {
-    super();
+  constructor(context: EmberObject, init: Partial<Item>) {
+    super(context);
     Object.assign(this, init);
   }
 }

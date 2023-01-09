@@ -1,17 +1,28 @@
-import Character from '.';
+import Character from './character';
 import GameObject from '../game-object';
+import EmberObject from '@ember/object';
+import { service } from '@ember/service';
+import LoggerService from 'new-horizons-client/services/logger';
 
 export default class PrimaryAttribute extends GameObject {
+  @service declare logger: LoggerService;
+
   declare current: number;
   declare start: number;
   declare min: number;
   declare max: number;
 
-  constructor(init: Partial<PrimaryAttribute>) {
-    super();
+  constructor(context: EmberObject, init: Partial<PrimaryAttribute>) {
+    super(context);
     Object.assign(this, init);
+
+    this.logger.log('test', { context: this.constructor.name });
   }
 
+  /**
+   * Adds a copy of the primary attribute to the given character.
+   * @param character The character.
+   */
   addToCharacter(character: Character) {
     // Check whether the character already owns this primary attribute
     if (
@@ -23,7 +34,7 @@ export default class PrimaryAttribute extends GameObject {
         `Character ${character.name} already owns primary attribute ${this.id}.`
       );
     }
-    const primaryAttribute = new PrimaryAttribute({ ...this });
+    const primaryAttribute = new PrimaryAttribute(this, { ...this });
     character.primaryAttributes.push(primaryAttribute);
   }
 }

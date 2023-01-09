@@ -1,3 +1,4 @@
+import EmberObject from '@ember/object';
 import GameObject from '../game-object';
 
 export default class CharacterPreset extends GameObject {
@@ -10,8 +11,8 @@ export default class CharacterPreset extends GameObject {
   declare crStart: number;
   declare fpStart: number;
 
-  constructor(init: Partial<CharacterPreset>) {
-    super();
+  constructor(context: EmberObject, init: Partial<CharacterPreset>) {
+    super(context);
     Object.assign(this, init);
   }
 }

@@ -39,7 +39,7 @@ export default class DatabaseService extends Service {
         'ability'
       )) as Partial<Ability>[];
       for (const record of collection) {
-        this._database['ability'].push(new Ability(record));
+        this._database['ability'].push(new Ability(this, record));
       }
     }
     return this._database['ability'];
@@ -54,7 +54,7 @@ export default class DatabaseService extends Service {
       this._database['app'] = [];
       const collection = (await this.getRawCollection('app')) as Partial<App>[];
       for (const record of collection) {
-        this._database['app'].push(new App(record));
+        this._database['app'].push(new App(this, record));
       }
     }
     return this._database['app'];
@@ -71,7 +71,9 @@ export default class DatabaseService extends Service {
         'character-preset'
       )) as Partial<CharacterPreset>[];
       for (const record of collection) {
-        this._database['character-preset'].push(new CharacterPreset(record));
+        this._database['character-preset'].push(
+          new CharacterPreset(this, record)
+        );
       }
     }
     return this._database['character-preset'];
@@ -88,7 +90,7 @@ export default class DatabaseService extends Service {
         'item'
       )) as Partial<Item>[];
       for (const record of collection) {
-        this._database['item'].push(new Item(record));
+        this._database['item'].push(new Item(this, record));
       }
     }
     return this._database['item'];
@@ -105,7 +107,7 @@ export default class DatabaseService extends Service {
         'origin'
       )) as Partial<Origin>[];
       for (const record of collection) {
-        this._database['origin'].push(new Origin(record));
+        this._database['origin'].push(new Origin(this, record));
       }
     }
     return this._database['origin'];
@@ -122,7 +124,7 @@ export default class DatabaseService extends Service {
         'pri-a'
       )) as Partial<PrimaryAttribute>[];
       for (const record of collection) {
-        this._database['pri-a'].push(new PrimaryAttribute(record));
+        this._database['pri-a'].push(new PrimaryAttribute(this, record));
       }
     }
     return this._database['pri-a'];
@@ -139,7 +141,7 @@ export default class DatabaseService extends Service {
         'sec-a'
       )) as Partial<SecondaryAttribute>[];
       for (const record of collection) {
-        this._database['sec-a'].push(new SecondaryAttribute(record));
+        this._database['sec-a'].push(new SecondaryAttribute(this, record));
       }
     }
     return this._database['sec-a'];
@@ -156,7 +158,7 @@ export default class DatabaseService extends Service {
         'skill'
       )) as Partial<Skill>[];
       for (const record of collection) {
-        this._database['skill'].push(new Skill(record));
+        this._database['skill'].push(new Skill(this, record));
       }
     }
     return this._database['skill'];
@@ -173,7 +175,7 @@ export default class DatabaseService extends Service {
         'specialisation'
       )) as Partial<Specialisation>[];
       for (const record of collection) {
-        this._database['specialisation'].push(new Specialisation(record));
+        this._database['specialisation'].push(new Specialisation(this, record));
       }
     }
     return this._database['specialisation'];
@@ -190,7 +192,7 @@ export default class DatabaseService extends Service {
         'trait'
       )) as Partial<Trait>[];
       for (const record of collection) {
-        this._database['trait'].push(new Trait(record));
+        this._database['trait'].push(new Trait(this, record));
       }
     }
     return this._database['trait'];

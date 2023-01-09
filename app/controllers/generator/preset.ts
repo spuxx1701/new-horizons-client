@@ -34,7 +34,7 @@ export default class GeneratorPresetController extends Controller {
   }
 
   @action handlePresetSelect(option: DropdownOption) {
-    this.characterPreset = { ...(option.data as CharacterPreset) };
+    this.characterPreset = new CharacterPreset(this, option.data);
     this.characterPresetChangeset = new EmberChangeset(
       this.characterPreset as CharacterPreset
     );
