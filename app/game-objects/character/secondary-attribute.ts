@@ -37,6 +37,18 @@ export default class SecondaryAttribute extends GameObject {
    * Recalculates the secondary attribute's values.
    */
   recalculate(character: Character) {
-    // do something
+    let sum = 0;
+    for (const primaryAttributeId of this.primaryAttributes) {
+      const primaryAttribute = character.primaryAttributes.find(
+        (primaryAttribute) => primaryAttribute.id === primaryAttributeId
+      );
+      if (!primaryAttribute) {
+        throw new Error(
+          `Unable to find '${primaryAttributeId}' on character ${character.getCharacterNameAndId()}.`
+        );
+      }
+      sum += primaryAttribute.current;
+    }
+    this.current = Math.round(sum / this.div);
   }
 }

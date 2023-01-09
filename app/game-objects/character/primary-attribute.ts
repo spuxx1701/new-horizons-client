@@ -15,8 +15,6 @@ export default class PrimaryAttribute extends GameObject {
   constructor(context: EmberObject, init: Partial<PrimaryAttribute>) {
     super(context);
     Object.assign(this, init);
-
-    this.logger.log('test', { context: this.constructor.name });
   }
 
   /**

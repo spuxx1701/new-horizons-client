@@ -27,19 +27,19 @@ export default class GeneratorService extends Service {
    * @param characterPreset The character preset that will be used during generation.
    */
   async startGeneration(characterPreset: CharacterPreset) {
+    const id = this.utility.getUuid();
+    this.logger.log(`Starting generation process for character ${id}.`, {
+      context: this.constructor.name,
+    });
     // Initialize character
     this.character = new Character(
       this,
-      this.utility.getUuid(),
+      id,
       ENV.gameVersion,
       characterPreset.id,
       this.intl.t('generator.character-default-name')
     );
     await this.initializeAttributes();
-    this.logger.log(
-      `Attributes initialized for character ${this.character.getCharacterNameAndId()}.`,
-      { context: this.constructor.name }
-    );
     await this.initializeSkills();
     // Set proper state
     this.state = 'origin';
@@ -50,22 +50,26 @@ export default class GeneratorService extends Service {
    * Will initialize the character's primary and secondary attributes.
    */
   private async initializeAttributes() {
-    this.characterIsDefinedOrThrow();
     const primaryAttributes = await this.database.getPrimaryAttributes();
     for (const primaryAttribute of primaryAttributes) {
-      primaryAttribute.addToCharacter(this.character as Character);
+      primaryAttribute.addToCharacter(this.getCharacterOrThrow());
     }
     const secondaryAttributes = await this.database.getSecondaryAttributes();
     for (const secondaryAttribute of secondaryAttributes) {
-      secondaryAttribute.addToCharacter(this.character as Character);
+      secondaryAttribute.addToCharacter(this.getCharacterOrThrow());
     }
+    this.logger.log(
+      `Attributes initialized for character ${this.getCharacterOrThrow().getCharacterNameAndId()}.`,
+      { context: this.constructor.name }
+    );
+    this.getCharacterOrThrow().recalculateSecondaryAttributes();
   }
 
   /**
    * Will initialize the character's basic skills.
    */
   private async initializeSkills() {
-    this.characterIsDefinedOrThrow();
+    // do something
   }
 
   /**
@@ -76,9 +80,13 @@ export default class GeneratorService extends Service {
     (this.character as Character).originId = origin.id;
   }
 
-  private characterIsDefinedOrThrow() {
+  /**
+   * Either returns the assigned character or throws an error if character is undefined.
+   * @returns The character.
+   */
+  getCharacterOrThrow() {
     if (!this.character) {
       throw new Error('Character is not defined.');
-    } else return true;
+    } else return this.character;
   }
 }
