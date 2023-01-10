@@ -7,7 +7,7 @@ button {
   min-height: var(--default-control-height);
   border: none;
   background-color: var(--color-control-inactive);
-  color: var(--color-text-default);
+  color: var(--color-text-control);
   overflow: hidden;
 }
 

@@ -20,6 +20,7 @@
   --color-tooltip-background: rgba(155, 25, 0, 0.9);
 
   --color-text-default: white;
+  --color-text-control: white;
   --color-text-highlight: rgb(255, 220, 220);
   --color-text-link: red;
   --color-text-link-hover: red;

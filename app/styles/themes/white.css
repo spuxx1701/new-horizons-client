@@ -10,7 +10,7 @@
   --color-container-background: rgba(225, 225, 225, 0.95);
 
   --color-control-disabled: #8b8b8b;
-  --color-control-inactive: #a3dfdf;
+  --color-control-inactive: #37373c;
   --color-control-inactive-secondary: rgb(155, 155, 155);
   --color-control-hover: #498082;
   --color-control-active: #498082;
@@ -20,6 +20,7 @@
   --color-tooltip-background: rgba(235, 235, 235, 0.9);
 
   --color-text-default: rgb(25, 25, 25);
+  --color-text-control: white;
   --color-text-highlight: black;
   --color-text-link: #498082;
   --color-text-link-hover: #315758;

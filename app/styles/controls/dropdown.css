@@ -55,6 +55,7 @@
 
 .dropdown-menu {
   width: 100%;
+  top: var(--control-default-height);
   border-radius: 5px;
   background-color: var(--color-control-inactive);
   padding: 0px;
@@ -69,7 +70,7 @@
 }
 
 .dropdown-item {
-  color: var(--color-text-default);
+  color: var(--color-text-control);
   min-height: 35px;
   padding: 0 8px 0 8px;
   max-width: 100%;
