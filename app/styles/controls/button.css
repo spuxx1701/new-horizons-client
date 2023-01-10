@@ -24,8 +24,12 @@ button:disabled {
   background-color: var(--color-control-disabled);
 }
 
+button svg {
+  margin: 0 0.5rem 0 0;
+}
+
 button p {
-  margin: 0 0 0 1rem;
+  margin: 0;
 }
 
 button.control-xx-small svg {

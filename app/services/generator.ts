@@ -43,7 +43,6 @@ export default class GeneratorService extends Service {
     await this.initializeSkills();
     // Set proper state
     this.state = 'origin';
-    console.log(this.character);
   }
 
   /**

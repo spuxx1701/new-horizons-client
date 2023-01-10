@@ -3,9 +3,13 @@
   {{on 'click' this.handleClick}}
   class='control-{{this.size}} {{this.class}}'
   disabled={{this.disabled}}
+  title={{if (eq this.size 'xx-small') @text}}
+  ...attributes
 >
-  <FaIcon @icon={{@icon}} @prefix={{this.prefix}} />
-  {{#if @text}}
+  {{#if @icon}}
+    <FaIcon @icon={{@icon}} @prefix={{this.prefix}} />
+  {{/if}}
+  {{#if (not-eq this.size 'xx-small')}}
     <p>{{@text}}</p>
   {{/if}}
 </button>

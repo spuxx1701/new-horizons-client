@@ -30,6 +30,8 @@ declare global {
     | 'specialisation'
     | 'trait'
     | 'weight-modifier';
+
+  type ModalType = 'default' | 'success' | 'warning' | 'error';
 }
 
 export {};

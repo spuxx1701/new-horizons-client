@@ -1,0 +1,14 @@
+<div class='modal-header modal-header-{{this.type}}'>
+  <div class='modal-header-title-container'>
+    <FaIcon @icon={{this.icon}} />
+    <h4 class='modal-header-title'>{{yield}}</h4>
+  </div>
+  <button
+    type='button'
+    class='modal-header-close'
+    title={{t 'misc.close'}}
+    {{on 'click' this.handleClose}}
+  >
+    <FaIcon @icon='times' />
+  </button>
+</div>

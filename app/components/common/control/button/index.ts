@@ -7,7 +7,7 @@ export interface ButtonSignature {
   Args: {
     type?: 'button' | 'submit';
     class?: string;
-    text?: string;
+    text: string;
     icon?: string;
     prefix?: 'fas' | 'far';
     size?: ControlSize;

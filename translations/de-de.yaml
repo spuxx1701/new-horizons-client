@@ -1,5 +1,8 @@
 misc:
+  ok: OK
+  cancel: Abbrechen
   back: Zurück
+  close: Schließen
   required-field: Erforderliches Feld
   warn-unsaved-changes: Du hast ungespeicherte Änderungen (z.B. eine begonnene Charaktererstellung oder einen Charakter, den Du gerade bearbeitest). Wenn Du die Seite verlässt, gehen diese verloren. Möchtest Du fortfahren?
 sidebar:
@@ -56,6 +59,10 @@ generator:
     customize:
       title: Benutzerdefiniert
       text: Wenn Du möchtest, kannst Du alle Werte auch frei einstellen. Zuvor solltest Du Dich aber mit Deiner Spielleiter:in absprechen.
+    modal:
+      generation-in-progress:
+        title: 'Laufende Charaktererstellung'
+        text: 'Derzeit gibt es eine laufende Charaktererstellung. Wenn Du fortfährst, wird die Charactererstellung neugestartet und der unfertige Charakter geht verloren.'
 character-preset:
   hero: Held:in
   default: Standard

@@ -10,10 +10,13 @@ import UtilityService from 'new-horizons-client/services/utility';
 import CharacterPreset from 'new-horizons-client/game-objects/character/character-preset';
 import { EmberChangeset } from 'ember-changeset';
 import RouterService from '@ember/routing/router-service';
+import ModalService from 'new-horizons-client/services/modal';
 
 export default class GeneratorPresetController extends Controller {
   @service declare router: RouterService;
   @service declare utility: UtilityService;
+  @service declare modal: ModalService;
+  @service declare intl: any;
   declare model: GeneratorPresetRouteModel;
 
   @service declare localStorage: LocalStorageService;
@@ -53,8 +56,29 @@ export default class GeneratorPresetController extends Controller {
     });
   }
 
-  @action submit(event: Event) {
+  @action handleSubmit(event: Event) {
     event.preventDefault();
+    // Check whether a character is currently being generated and warn
+    // the user that their progress may be lost.
+    if (this.generator.character) {
+      this.modal.confirm({
+        icon: 'triangle-exclamation',
+        type: 'warning',
+        title: this.intl.t(
+          'generator.preset.modal.generation-in-progress.title'
+        ),
+        content: `<p>${this.intl.t(
+          'generator.preset.modal.generation-in-progress.text'
+        )}</p>`,
+        onSubmit: this.submit,
+      });
+    } else {
+      this.submit();
+    }
+  }
+
+  @action submit() {
+    this.modal.close();
     // Check whether the character preset has been customized
     if (
       JSON.stringify(this.characterPreset) !==

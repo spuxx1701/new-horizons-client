@@ -1,0 +1,19 @@
+<Modal::Internal::Header @icon={{@options.icon}} @type={{@options.type}}>
+  {{@options.title}}
+</Modal::Internal::Header>
+
+<Modal::Internal::Content>
+  {{this.content}}
+</Modal::Internal::Content>
+
+<Modal::Internal::Footer>
+  <Modal::Internal::Footer::Button
+    @text={{this.cancelLabel}}
+    @design='secondary'
+    @onClick={{this.handleCancel}}
+  />
+  <Modal::Internal::Footer::Button
+    @text={{this.submitLabel}}
+    @onClick={{this.handleSubmit}}
+  />
+</Modal::Internal::Footer>
