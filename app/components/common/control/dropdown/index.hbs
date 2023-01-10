@@ -9,9 +9,18 @@
       />
     {{/if}}</label>
   <div class='dropdown-inner control-{{this.size}}'>
+    {{#if @loop}}
+      <Common::Control::Button
+        class='dropdown-loop-button dropdown-loop-button-left'
+        @size='xx-small'
+        @icon='chevron-left'
+        @text={{t 'misc.back'}}
+        {{on 'click' this.handleBackClick}}
+      />
+    {{/if}}
     <button
       id='{{this.componentId}}-button'
-      class='dropdown-toggle'
+      class='dropdown-toggle {{if @loop "dropdown-toggle-loop"}}'
       type='button'
       aria-label={{@label}}
       aria-haspopup='true'
@@ -32,5 +41,14 @@
         >{{option.label}}</button>
       {{/each}}
     </div>
+    {{#if @loop}}
+      <Common::Control::Button
+        class='dropdown-loop-button dropdown-loop-button-right'
+        @size='xx-small'
+        @icon='chevron-right'
+        @text={{t 'misc.forward'}}
+        {{on 'click' this.handleForwardClick}}
+      />
+    {{/if}}
   </div>
 </div>

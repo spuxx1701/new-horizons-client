@@ -16,6 +16,7 @@ export interface Args {
   label?: string;
   onSelect?: Function;
   size?: ControlSize;
+  loop?: boolean;
 }
 
 export default class DropdownComponent extends Component<Args> {
@@ -84,5 +85,25 @@ export default class DropdownComponent extends Component<Args> {
     if (typeof this.args.onSelect === 'function') {
       this.args.onSelect(option);
     }
+  }
+
+  @action handleBackClick() {
+    if (!this.selectedOption) return;
+    const currentIndex = this.options.indexOf(
+      this.selectedOption as DropdownOption
+    );
+    let previousIndex = currentIndex - 1;
+    if (previousIndex < 0) previousIndex = this.options.length - 1;
+    this.handleItemClick(this.options[previousIndex] as DropdownOption);
+  }
+
+  @action handleForwardClick() {
+    if (!this.selectedOption) return;
+    const currentIndex = this.options.indexOf(
+      this.selectedOption as DropdownOption
+    );
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= this.options.length) nextIndex = 0;
+    this.handleItemClick(this.options[nextIndex] as DropdownOption);
   }
 }

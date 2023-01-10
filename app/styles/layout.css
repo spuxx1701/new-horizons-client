@@ -48,7 +48,12 @@
 
 .control-xx-small {
   width: var(--default-control-height);
+  min-width: var(--default-control-height);
   max-width: min(var(--default-control-height), 100%);
+}
+
+.control-xx-small svg {
+  margin: 0;
 }
 
 .control-x-small {

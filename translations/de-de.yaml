@@ -2,6 +2,7 @@ misc:
   ok: OK
   cancel: Abbrechen
   back: Zurück
+  forward: Weiter
   close: Schließen
   required-field: Erforderliches Feld
   warn-unsaved-changes: Du hast ungespeicherte Änderungen (z.B. eine begonnene Charaktererstellung oder einen Charakter, den Du gerade bearbeitest). Wenn Du die Seite verlässt, gehen diese verloren. Möchtest Du fortfahren?

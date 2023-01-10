@@ -24,6 +24,7 @@
 
 .dropdown-inner {
   position: relative;
+  display: flex;
 }
 
 .dropdown-toggle {
@@ -88,4 +89,27 @@
 
 .dropdown-item:last-child {
   border-radius: 0px 0px 5px 5px;
+}
+
+button.dropdown-loop-button {
+  width: 45px;
+}
+
+button.dropdown-loop-button svg {
+  height: 50%;
+  width: 50%;
+}
+
+.dropdown-toggle-loop {
+  border-radius: 0;
+}
+
+.dropdown-loop-button-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-loop-button-left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
