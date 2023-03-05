@@ -8,6 +8,15 @@ module.exports = function (defaults) {
       bootstrapVersion: 5,
       importBootstrapCSS: true,
     },
+    babel: {
+      plugins: [...require('ember-cli-code-coverage').buildBabelPlugin()],
+    },
+    fingerprint: {
+      enabled:
+        process.env.EMBER_ENV === 'production' ||
+        process.env.EMBER_ENV === 'develop',
+      exclude: [],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
