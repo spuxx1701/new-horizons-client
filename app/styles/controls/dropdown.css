@@ -55,7 +55,7 @@
 
 .dropdown-menu {
   width: 100%;
-  top: var(--control-default-height);
+  top: var(--default-control-height);
   border-radius: 5px;
   background-color: var(--color-control-inactive);
   padding: 0px;

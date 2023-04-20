@@ -24,6 +24,10 @@ generator:
   origin:
     title: Wähle Deine Herkunft
     submit: Herkunft wählen
+    modal:
+      submit-origin:
+        title: Herkunft wählen
+        text: Herkunft, Bonusfähigkeiten und Muttersprache können später nicht mehr verändert werden. Möchtest Du fortfahren?
   preset:
     title: Voreinstellungen
     character-preset:
@@ -89,3 +93,85 @@ tooltip:
   interest-points:
     title: Interessenspunkte
     text: Interessenspunkte werden während der Charaktererstellung verwendet, um Fähigkeiten zu erwerben und zu steigern. Ihre Verteilung drückt aus, wofür sich Dein Charakter interessiert, worin er ausgebildet wurde und/oder worin er sich auskennt. Die Interessenspunkte dürfen am Ende der Charaktererstellung keinen negativen Wert aufweisen.
+skill:
+  combat:
+    energy-weapons: Energiewaffen
+    heavy-weapons: Schwere Waffen
+    melee-hands: Unbewaffneter Nahkampf
+    melee-weapons: Bewaffneter Nahkampf
+    onboard-weapons: Bordgeschütze
+    pistols: Pistolen
+    rifles: Gewehre
+    throwing: Werfen
+  crafting:
+    animal-training: Tiere abrichten
+    computers: Computer
+    cooking: Kochen
+    disguising: Verkleiden
+    drawing: Malen/Zeichnen
+    electrical-engineering: Elektrotechnik
+    explosives: Sprengstoffe
+    making-music: Musik machen
+    material-processing: Materialbearbeitung
+    mechanical-engineering: Konstruktion
+    medical-care: Medizinische Versorgung
+    pharmaceutics: Pharmazie
+    playing-games: Zocken
+    programming: Programmieren
+    writing: Texte verfassen
+  knowledge:
+    art: Kunstverständnis
+    astronomy: Astronomie
+    biology-and-medicine: Biologie und Medizin
+    chemistry: Chemie
+    electronics: Elektronik
+    gaming: Spiel und Glückspiel
+    general-knowledge: Allgemeinwissen
+    geology: Geologie
+    history: Geschichte
+    informatics: Informatik
+    law: Rechtswissenschaften
+    mathematics-and-economy: Mathematik und Wirtschaft
+    music: Musikverständnis
+    orientation: Orientierung
+    physics-and-mechanics: Physik und Mechanik
+    spaceflight: Raumfahrt
+    survival: Überleben
+    tactics-and-strategy: Taktik und Strategie
+  physical:
+    acting: Schauspielern
+    body-control: Körperbeherrschung
+    climbing: Klettern
+    dancing: Tanzen
+    diving: Tauchen
+    imitating-voices: Stimmen imitieren
+    inebriating: Zechen
+    perception: Aufmerksamkeit
+    running: Rennen
+    singing: Singen
+    sneaking-hiding: Schleichen/Verstecken
+    stealing: Taschendiebstahl
+    swimming: Schwimmen
+  social:
+    acting: Schauspielern
+    flirting: Flirten
+    inspiring: Begeistern
+    intimidating: Einschüchtern
+    judgement: Menschenkenntnis
+    reasoning: Rhetorik
+    self-control: Selbstbeherrschung
+    soft-skills: Sozialkompetenz
+    teaching: Lehren
+    trading: Handeln
+  vehicles:
+    extraplanetary-flying: Extraplanetares Fliegen
+    intraplanetary-flying: Intraplanetares Fliegen
+    land-vehicles: Landfahrzeuge
+    water-vehicles: Wasserfahrzeuge
+skill-category:
+  combat: Kampffähigkeiten
+  crafting: Handwerkliche Fähigkeiten
+  knowledge: Wissensfähigkeiten
+  physical: Körperliche Fähigkeiten
+  social: Soziale Fähigkeiten
+  vehicles: Fahrzeugfähigkeiten

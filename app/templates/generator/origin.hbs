@@ -11,13 +11,38 @@
 >
   <Common::Control::Dropdown
     @options={{this.originOptions}}
+    @default={{this.selectedOriginOptionIndex}}
     @onSelect={{this.handleOriginSelect}}
     @size='x-large'
+    @loop={{true}}
   />
+
+  <Common::Layout::Separator @style='line' />
+
+  <h3>Wähle Deine Bonusfähigkeiten</h3>
+
+  {{#each this.skillOptions as |skillOption|}}
+    <Common::Control::Dropdown
+      @options={{skillOption.options}}
+      @onSelect={{this.handleSkillOptionSelect}}
+      @size='x-large'
+    />
+  {{/each}}
+
+  <h3>Wähle Deine Muttersprache</h3>
+
+  <Common::Container::Element @size='x-small'>
+    <Common::Control::Input
+      @label='Muttersprache'
+      @value='Solaire'
+      @placeholder='Solaire'
+      @size='medium'
+    />
+  </Common::Container::Element>
 
   <Common::Control::Button
     @text={{translate 'generator.origin.submit'}}
     @icon='globe'
-    @onClick={{this.submit}}
+    @onClick={{this.handleSubmit}}
   />
 </Common::Container>

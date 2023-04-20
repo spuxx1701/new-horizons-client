@@ -21,4 +21,17 @@ export default class Origin extends GameObject {
     super(context);
     Object.assign(this, init);
   }
+
+  /**
+   * Gets the default values for the origin's skill options.
+   * @returns The default values.
+   */
+  getSkillOptionDefaults(): { id: string; level: number }[] {
+    return this.skillOptions.map((skillOption) => {
+      return {
+        id: skillOption.options[0] as string,
+        level: skillOption.level,
+      };
+    });
+  }
 }

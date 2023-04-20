@@ -77,7 +77,7 @@ export default class GeneratorPresetController extends Controller {
     }
   }
 
-  @action submit() {
+  @action async submit() {
     this.modal.close();
     // Check whether the character preset has been customized
     if (
@@ -91,7 +91,7 @@ export default class GeneratorPresetController extends Controller {
       this.characterPreset.id = 'character-preset/custom';
     }
     // Start generation and navigate to origin route
-    this.generator.startGeneration(this.characterPreset);
+    await this.generator.startGeneration(this.characterPreset);
     this.router.transitionTo('generator.origin');
   }
 }

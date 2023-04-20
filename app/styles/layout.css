@@ -18,31 +18,31 @@
   max-width: min(100%, var(--app-content-max-width));
 }
 
-.container-title {
+.container-title, .container h1, .container h2, .container h3, .container h4 {
   text-align: center;
 }
 
-.container.align-items-center>* {
+.container.align-items-center>*:not(.container-element) {
   width: 100%;
 }
 
-.container-x-small {
+.container-x-small, .container-element-x-small {
   width: 400px;
 }
 
-.container-small {
+.container-small, .container-element-small {
   width: 500px;
 }
 
-.container-medium {
+.container-medium, .container-element-medium {
   width: 650px;
 }
 
-.container-large {
+.container-large, .container-element-large {
   width: 800px;
 }
 
-.container-max {
+.container-max, .container-element-max {
   width: 100%;
 }
 

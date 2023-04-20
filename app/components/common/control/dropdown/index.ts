@@ -12,7 +12,7 @@ export interface DropdownOption {
 
 export interface Args {
   options: DropdownOption[];
-  default?: DropdownOption;
+  default?: number;
   label?: string;
   onSelect?: Function;
   size?: ControlSize;
@@ -30,8 +30,12 @@ export default class DropdownComponent extends Component<Args> {
   constructor(owner: unknown, args: Args) {
     super(owner, args);
     if (args.options.length > 0) {
-      if (args.default) {
-        this.selectedOption = args.default;
+      if (
+        typeof args.default === 'number' &&
+        args.default >= 0 &&
+        args.default < args.options.length
+      ) {
+        this.selectedOption = args.options[args.default];
       } else {
         this.selectedOption = args.options[0];
       }

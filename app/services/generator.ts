@@ -14,7 +14,12 @@ export default class GeneratorService extends Service {
   @service declare intl: any;
   @service declare utility: UtilityService;
 
+  // Global state
   @tracked state: 'preset' | 'origin' | 'post-origin' = 'preset';
+  // Sub-states
+  @tracked selectedOriginId: string | undefined;
+  @tracked selectedOriginSkillOptions: { id: string; level: number }[] = [];
+  @tracked selectedMotherTongue: string | undefined;
 
   character: Character | undefined;
 
@@ -41,8 +46,11 @@ export default class GeneratorService extends Service {
     );
     await this.initializeAttributes();
     await this.initializeSkills();
-    // Set proper state
+    // Set proper states
     this.state = 'origin';
+    this.selectedOriginId = undefined;
+    this.selectedOriginSkillOptions = [];
+    this.selectedMotherTongue = undefined;
   }
 
   /**
@@ -75,7 +83,11 @@ export default class GeneratorService extends Service {
    * Sets a character's origin.
    * @param origin
    */
-  setOrigin(origin: Origin) {
+  setOrigin(
+    origin: Origin,
+    motherTongue: string,
+    selectedSkills: { id: string; level: number }[]
+  ) {
     (this.character as Character).originId = origin.id;
   }
 
