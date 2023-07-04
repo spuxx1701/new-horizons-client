@@ -1,4 +1,4 @@
-import Service from '@ember/service';
+import Service, { service } from '@ember/service';
 import Ability from 'new-horizons-client/game-objects/character/ability';
 import App from 'new-horizons-client/game-objects/character/app';
 import CharacterPreset from 'new-horizons-client/game-objects/character/character-preset';
@@ -9,10 +9,9 @@ import Skill from 'new-horizons-client/game-objects/character/skill';
 import Specialisation from 'new-horizons-client/game-objects/character/specialisation';
 import Trait from 'new-horizons-client/game-objects/character/trait';
 import Item from 'new-horizons-client/game-objects/item';
+import LoggerService from './logger';
 
-export const CONSTANTS = {};
-
-export interface DatabaseStore {
+interface DatabaseStore {
   ability?: Ability[];
   app?: App[];
   'character-preset'?: CharacterPreset[];
@@ -25,24 +24,28 @@ export interface DatabaseStore {
   trait?: Trait[];
 }
 
+/**
+ * `DatabaseService` loads, caches and provides all `GameObject` collections.
+ */
 export default class DatabaseService extends Service {
-  private _database: DatabaseStore = {};
+  @service declare logger: LoggerService;
+  private store: DatabaseStore = {};
 
   /**
    * Loads and returns the 'ability' collection.
    * @returns The 'ability' collection.
    */
   async getAbilities(): Promise<Ability[]> {
-    if (!this._database['ability']) {
-      this._database['ability'] = [];
+    if (!this.store['ability']) {
+      this.store['ability'] = [];
       const collection = (await this.getRawCollection(
         'ability'
       )) as Partial<Ability>[];
       for (const record of collection) {
-        this._database['ability'].push(new Ability(this, record));
+        this.store['ability'].push(new Ability(this, record));
       }
     }
-    return this._database['ability'];
+    return this.store['ability'];
   }
 
   /**
@@ -50,14 +53,14 @@ export default class DatabaseService extends Service {
    * @returns The 'app' collection.
    */
   async getApps(): Promise<App[]> {
-    if (!this._database['app']) {
-      this._database['app'] = [];
+    if (!this.store['app']) {
+      this.store['app'] = [];
       const collection = (await this.getRawCollection('app')) as Partial<App>[];
       for (const record of collection) {
-        this._database['app'].push(new App(this, record));
+        this.store['app'].push(new App(this, record));
       }
     }
-    return this._database['app'];
+    return this.store['app'];
   }
 
   /**
@@ -65,18 +68,16 @@ export default class DatabaseService extends Service {
    * @returns The 'character-preset' collection.
    */
   async getCharacterPresets(): Promise<CharacterPreset[]> {
-    if (!this._database['character-preset']) {
-      this._database['character-preset'] = [];
+    if (!this.store['character-preset']) {
+      this.store['character-preset'] = [];
       const collection = (await this.getRawCollection(
         'character-preset'
       )) as Partial<CharacterPreset>[];
       for (const record of collection) {
-        this._database['character-preset'].push(
-          new CharacterPreset(this, record)
-        );
+        this.store['character-preset'].push(new CharacterPreset(this, record));
       }
     }
-    return this._database['character-preset'];
+    return this.store['character-preset'];
   }
 
   /**
@@ -84,16 +85,16 @@ export default class DatabaseService extends Service {
    * @returns The 'item' collection.
    */
   async getItems(): Promise<Item[]> {
-    if (!this._database['item']) {
-      this._database['item'] = [];
+    if (!this.store['item']) {
+      this.store['item'] = [];
       const collection = (await this.getRawCollection(
         'item'
       )) as Partial<Item>[];
       for (const record of collection) {
-        this._database['item'].push(new Item(this, record));
+        this.store['item'].push(new Item(this, record));
       }
     }
-    return this._database['item'];
+    return this.store['item'];
   }
 
   /**
@@ -101,16 +102,16 @@ export default class DatabaseService extends Service {
    * @returns The 'origin' collection.
    */
   async getOrigins(): Promise<Origin[]> {
-    if (!this._database['origin']) {
-      this._database['origin'] = [];
+    if (!this.store['origin']) {
+      this.store['origin'] = [];
       const collection = (await this.getRawCollection(
         'origin'
       )) as Partial<Origin>[];
       for (const record of collection) {
-        this._database['origin'].push(new Origin(this, record));
+        this.store['origin'].push(new Origin(this, record));
       }
     }
-    return this._database['origin'];
+    return this.store['origin'];
   }
 
   /**
@@ -118,16 +119,16 @@ export default class DatabaseService extends Service {
    * @returns The 'primary-attribute' collection.
    */
   async getPrimaryAttributes(): Promise<PrimaryAttribute[]> {
-    if (!this._database['pri-a']) {
-      this._database['pri-a'] = [];
+    if (!this.store['pri-a']) {
+      this.store['pri-a'] = [];
       const collection = (await this.getRawCollection(
         'pri-a'
       )) as Partial<PrimaryAttribute>[];
       for (const record of collection) {
-        this._database['pri-a'].push(new PrimaryAttribute(this, record));
+        this.store['pri-a'].push(new PrimaryAttribute(this, record));
       }
     }
-    return this._database['pri-a'];
+    return this.store['pri-a'];
   }
 
   /**
@@ -135,16 +136,16 @@ export default class DatabaseService extends Service {
    * @returns The 'secondary-attribute' collection.
    */
   async getSecondaryAttributes(): Promise<SecondaryAttribute[]> {
-    if (!this._database['sec-a']) {
-      this._database['sec-a'] = [];
+    if (!this.store['sec-a']) {
+      this.store['sec-a'] = [];
       const collection = (await this.getRawCollection(
         'sec-a'
       )) as Partial<SecondaryAttribute>[];
       for (const record of collection) {
-        this._database['sec-a'].push(new SecondaryAttribute(this, record));
+        this.store['sec-a'].push(new SecondaryAttribute(this, record));
       }
     }
-    return this._database['sec-a'];
+    return this.store['sec-a'];
   }
 
   /**
@@ -152,16 +153,16 @@ export default class DatabaseService extends Service {
    * @returns The 'skill' collection.
    */
   async getSkills(): Promise<Skill[]> {
-    if (!this._database['skill']) {
-      this._database['skill'] = [];
+    if (!this.store['skill']) {
+      this.store['skill'] = [];
       const collection = (await this.getRawCollection(
         'skill'
       )) as Partial<Skill>[];
       for (const record of collection) {
-        this._database['skill'].push(new Skill(this, record));
+        this.store['skill'].push(new Skill(this, record));
       }
     }
-    return this._database['skill'];
+    return this.store['skill'];
   }
 
   /**
@@ -169,16 +170,16 @@ export default class DatabaseService extends Service {
    * @returns The 'specialisation' collection.
    */
   async getSpecialisations(): Promise<Specialisation[]> {
-    if (!this._database['specialisation']) {
-      this._database['specialisation'] = [];
+    if (!this.store['specialisation']) {
+      this.store['specialisation'] = [];
       const collection = (await this.getRawCollection(
         'specialisation'
       )) as Partial<Specialisation>[];
       for (const record of collection) {
-        this._database['specialisation'].push(new Specialisation(this, record));
+        this.store['specialisation'].push(new Specialisation(this, record));
       }
     }
-    return this._database['specialisation'];
+    return this.store['specialisation'];
   }
 
   /**
@@ -186,16 +187,16 @@ export default class DatabaseService extends Service {
    * @returns The 'specialisation' collection.
    */
   async getTraits(): Promise<Trait[]> {
-    if (!this._database['trait']) {
-      this._database['trait'] = [];
+    if (!this.store['trait']) {
+      this.store['trait'] = [];
       const collection = (await this.getRawCollection(
         'trait'
       )) as Partial<Trait>[];
       for (const record of collection) {
-        this._database['trait'].push(new Trait(this, record));
+        this.store['trait'].push(new Trait(this, record));
       }
     }
-    return this._database['trait'];
+    return this.store['trait'];
   }
 
   /**

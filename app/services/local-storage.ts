@@ -4,6 +4,9 @@ import { isValidTheme, Theme } from './renderer';
 
 const PREFIX = 'newhorizons-';
 
+/**
+ * `LocalStorageService` wraps and provides access to `localStorage`.
+ */
 export default class LocalStorageService extends Service {
   @tracked tutorialsEnabled =
     localStorage.getItem(PREFIX + 'tutorialsEnabled') === '1' || false;

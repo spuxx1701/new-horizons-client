@@ -46,9 +46,9 @@ export default class Character extends GameObject {
     for (const secondaryAttribute of this.secondaryAttributes) {
       secondaryAttribute.recalculate(this);
     }
-    this.logger.log(
+    this.logger.info(
       `Recalculated secondary attributes of character ${this.getCharacterNameAndId()}.`,
-      { context: this.constructor.name }
+      Character.name
     );
   }
 }

@@ -33,9 +33,10 @@ export default class GeneratorService extends Service {
    */
   async startGeneration(characterPreset: CharacterPreset) {
     const id = this.utility.getUuid();
-    this.logger.log(`Starting generation process for character ${id}.`, {
-      context: this.constructor.name,
-    });
+    this.logger.info(
+      `Starting generation process for character ${id}.`,
+      GeneratorService.name
+    );
     // Initialize character
     this.character = new Character(
       this,
@@ -65,9 +66,9 @@ export default class GeneratorService extends Service {
     for (const secondaryAttribute of secondaryAttributes) {
       secondaryAttribute.addToCharacter(this.getCharacterOrThrow());
     }
-    this.logger.log(
+    this.logger.info(
       `Attributes initialized for character ${this.getCharacterOrThrow().getCharacterNameAndId()}.`,
-      { context: this.constructor.name }
+      GeneratorService.name
     );
     this.getCharacterOrThrow().recalculateSecondaryAttributes();
   }
