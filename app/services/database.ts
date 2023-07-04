@@ -218,16 +218,4 @@ export default class DatabaseService extends Service {
       throw new Error(`Unable to fetch collection '${collection}' (${error}).`);
     }
   }
-
-  /**
-   * This abomination deals with mapping and loading collections. In contrast to getRawCollection() it will also cache
-   * the data and return the data as proper instances of the corresponding class, behaving similarly to the dedicated getter functions.
-   * ⚠ Beware: The spaghetti is strong in this one.
-   */
-  mapAndLoadCollection(collection: CollectionName): Promise<any[]> {
-    switch (collection) {
-      default:
-        throw new Error(`Collection ${collection} is unknown.`);
-    }
-  }
 }
