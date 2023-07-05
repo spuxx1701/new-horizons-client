@@ -47,10 +47,7 @@ export default class RendererService extends Service {
       }
       const ripple = document.createElement('span');
       const diameter = Math.max(control.clientWidth, control.clientHeight);
-      const radius = diameter / 2;
       ripple.style.width = ripple.style.height = `${diameter}px`;
-      // ripple.style.left = `${event.clientX - (control.offsetLeft + radius)}px`;
-      // ripple.style.top = `${event.clientY - (control.offsetTop + radius)}px`;
       ripple.classList.add('click-ripple');
       control.appendChild(ripple);
     }
