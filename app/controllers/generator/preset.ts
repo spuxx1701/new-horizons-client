@@ -5,22 +5,21 @@ import { service } from '@ember/service';
 import { DropdownOption } from 'new-horizons-client/components/common/control/dropdown';
 import { GeneratorPresetRouteModel } from 'new-horizons-client/routes/generator/preset';
 import GeneratorService from 'new-horizons-client/services/generator';
-import LocalStorageService from 'new-horizons-client/services/local-storage';
 import UtilityService from 'new-horizons-client/services/utility';
 import CharacterPreset from 'new-horizons-client/game-objects/character/character-preset';
 import { EmberChangeset } from 'ember-changeset';
 import RouterService from '@ember/routing/router-service';
 import ModalService from 'new-horizons-client/services/modal';
+import SettingsService from 'new-horizons-client/services/settings';
 
 export default class GeneratorPresetController extends Controller {
   @service declare router: RouterService;
+  @service declare settings: SettingsService;
   @service declare utility: UtilityService;
   @service declare modal: ModalService;
+  @service declare generator: GeneratorService;
   @service declare intl: any;
   declare model: GeneratorPresetRouteModel;
-
-  @service declare localStorage: LocalStorageService;
-  @service declare generator: GeneratorService;
 
   @tracked customize = false;
 
@@ -33,7 +32,7 @@ export default class GeneratorPresetController extends Controller {
   );
 
   @action toggleTutorials() {
-    this.localStorage.setTutorialsEnabled(!this.localStorage.tutorialsEnabled);
+    this.settings.update({ tutorials: !this.settings.getValue('tutorials') });
   }
 
   @action handlePresetSelect(option: DropdownOption) {

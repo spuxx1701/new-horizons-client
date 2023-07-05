@@ -1,6 +1,6 @@
 import { action } from '@ember/object';
 import Service, { service } from '@ember/service';
-import LocalStorageService from './local-storage';
+import SettingsService from './settings';
 
 export enum Theme {
   default,
@@ -13,12 +13,11 @@ export function isValidTheme(value: number) {
 }
 
 export default class RendererService extends Service {
-  @service declare localStorage: LocalStorageService;
-
+  @service declare settings: SettingsService;
   desktopMinWidth = 768;
 
   initialize() {
-    this.currentTheme = this.localStorage.theme;
+    this.currentTheme = this.settings.getValue('theme');
   }
 
   get isDesktop() {
@@ -30,11 +29,11 @@ export default class RendererService extends Service {
   }
 
   get currentTheme() {
-    return this.localStorage.theme;
+    return this.settings.getValue('theme');
   }
 
   set currentTheme(theme: Theme) {
-    this.localStorage.setTheme(theme);
+    this.settings.update({ theme });
     document.documentElement.className = `theme-${Theme[theme]}`;
   }
 

@@ -15,10 +15,12 @@ module('Unit | Service | Settings', function (hooks) {
   });
 
   hooks.afterEach(function () {
+    settings.reload();
     sinon.restore();
   });
 
   test('should not log a debug message when debug mode is disabled', function (assert) {
+    settings.update({ debug: false });
     logger.debug('foo');
     assert.equal(logger.messages.length, 0);
   });

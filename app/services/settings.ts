@@ -20,7 +20,7 @@ const LOCAL_STORAGE_KEY = `${appConfig.localStoragePrefix}settings`;
  */
 export default class SettingsService extends Service {
   @service declare logger: LoggerService;
-  @tracked settings: Settings = this.load();
+  @tracked settings: Settings = this.loadFromStorage();
 
   /**
    * Returns the current settings value for the given key.
@@ -45,22 +45,27 @@ export default class SettingsService extends Service {
   }
 
   /**
-   * Loads the settings from `localStorage`. Uses default settings if none can be found.
+   * Loads the settings from `localStorage`. Uses default settings if no settings
+   * can be found in `localStorage`
    */
-  load(): Settings {
+  loadFromStorage(): Settings {
     const jsonString = localStorage.getItem(LOCAL_STORAGE_KEY);
+    let settings: Settings;
     if (jsonString) {
       const loadedSettings: Settings = JSON.parse(jsonString);
-      this.settings = { ...DEFAULT_SETTINGS, ...loadedSettings };
-      this.logger.debug(`Settings loaded: ${jsonString}`, SettingsService.name);
+      settings = { ...DEFAULT_SETTINGS, ...loadedSettings };
     } else {
-      this.settings = { ...DEFAULT_SETTINGS };
-      this.logger.debug(
-        'Could not find any stored settings. Using default settings.',
-        SettingsService.name
-      );
+      settings = { ...DEFAULT_SETTINGS };
     }
-    return this.settings;
+    return settings;
+  }
+
+  /**
+   * Reloads the currently stored settings by re-fetching them
+   * from `localStorage`.
+   */
+  reload(): void {
+    this.settings = this.loadFromStorage();
   }
 
   /**

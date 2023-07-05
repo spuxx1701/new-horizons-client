@@ -1,7 +1,7 @@
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import Component from '@glimmer/component';
-import LocalStorageService from 'new-horizons-client/services/local-storage';
+import SettingsService from 'new-horizons-client/services/settings';
 import UtilityService from 'new-horizons-client/services/utility';
 import { tracked } from 'tracked-built-ins';
 
@@ -10,7 +10,7 @@ export interface Args {
 }
 
 export default class TutorialBoxComponent extends Component<Args> {
-  @service declare localStorage: LocalStorageService;
+  @service declare settings: SettingsService;
   @service declare utility: UtilityService;
 
   @tracked fading = true;
@@ -27,7 +27,7 @@ export default class TutorialBoxComponent extends Component<Args> {
    * This did-update modifier observes localStorage.tutorialsEnabled.
    */
   @action update() {
-    if (this.localStorage.tutorialsEnabled) {
+    if (this.settings.getValue('tutorials')) {
       this.show();
     } else {
       this.close();
