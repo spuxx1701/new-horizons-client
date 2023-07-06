@@ -5,7 +5,7 @@ import { setupRenderingTest } from 'new-horizons-client/tests/helpers';
 import { sleep } from 'new-horizons-client/utilities/misc.utility';
 import { module, test } from 'qunit';
 
-module('Integration | Components | Features | Tooltip', function (hooks) {
+module('Integration | Component | Features | Tooltip', function (hooks) {
   setupRenderingTest(hooks);
 
   hooks.before(() => {

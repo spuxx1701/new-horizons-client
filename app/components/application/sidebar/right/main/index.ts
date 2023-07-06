@@ -7,13 +7,13 @@ export default class SidebarRightMainComponent extends Component {
   @service declare renderer: RendererService;
 
   @action setThemeDefault() {
-    this.renderer.currentTheme = Theme.default;
+    this.renderer.setTheme(Theme.default);
   }
 
   @action setThemeWhite() {
-    this.renderer.currentTheme = Theme.white;
+    this.renderer.setTheme(Theme.white);
   }
   @action setThemeRed() {
-    this.renderer.currentTheme = Theme.red;
+    this.renderer.setTheme(Theme.red);
   }
 }
