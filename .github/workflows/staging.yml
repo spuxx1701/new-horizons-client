@@ -1,0 +1,28 @@
+name: staging
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  types:
+    uses: spuxx1701/ci-cd/.github/workflows/npm_types.yml@v2.0
+
+  lint:
+    uses: spuxx1701/ci-cd/.github/workflows/npm_lint.yml@v2.0
+
+  test:
+    uses: spuxx1701/ci-cd/.github/workflows/npm_test-coverage.yml@v2.0
+
+  release_image:
+    needs:
+      - types
+      - lint
+      - test
+    uses: spuxx1701/ci-cd/.github/workflows/release_image.yml@v2.0
+    with:
+      dockerfile: Dockerfile.staging
+    secrets:
+      dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
