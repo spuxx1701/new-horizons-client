@@ -1,6 +1,7 @@
 import { action } from '@ember/object';
 import Service, { service } from '@ember/service';
 import SettingsService from './settings';
+import { appConfig } from 'new-horizons-client/config/app.config';
 
 export enum Theme {
   default,
@@ -14,7 +15,6 @@ export function isValidTheme(value: number) {
 
 export default class RendererService extends Service {
   @service declare settings: SettingsService;
-  desktopMinWidth = 768;
 
   initialize() {
     this.currentTheme = this.settings.getValue('theme');
@@ -25,7 +25,7 @@ export default class RendererService extends Service {
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    return vw >= this.desktopMinWidth;
+    return vw >= appConfig.desktopMinWidth;
   }
 
   get currentTheme() {

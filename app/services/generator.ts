@@ -4,15 +4,14 @@ import CharacterPreset from 'new-horizons-client/game-objects/character/characte
 import ENV from 'new-horizons-client/config/environment';
 import Origin from 'new-horizons-client/game-objects/character/origin';
 import Character from 'new-horizons-client/game-objects/character/character';
-import UtilityService from './utility';
 import DatabaseService from './database';
 import LoggerService from './logger';
+import { getUuid } from 'new-horizons-client/utilities/misc.utility';
 
 export default class GeneratorService extends Service {
   @service declare logger: LoggerService;
   @service declare database: DatabaseService;
   @service declare intl: any;
-  @service declare utility: UtilityService;
 
   // Global state
   @tracked state: 'preset' | 'origin' | 'post-origin' = 'preset';
@@ -32,7 +31,7 @@ export default class GeneratorService extends Service {
    * @param characterPreset The character preset that will be used during generation.
    */
   async startGeneration(characterPreset: CharacterPreset) {
-    const id = this.utility.getUuid();
+    const id = getUuid();
     this.logger.info(
       `Starting generation process for character ${id}.`,
       GeneratorService.name

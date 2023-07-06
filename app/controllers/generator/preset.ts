@@ -31,6 +31,10 @@ export default class GeneratorPresetController extends Controller {
     this.characterPreset as CharacterPreset
   );
 
+  get tutorialsEnabled() {
+    return this.settings.getValue('tutorials');
+  }
+
   @action toggleTutorials() {
     this.settings.update({ tutorials: !this.settings.getValue('tutorials') });
   }

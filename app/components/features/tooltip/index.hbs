@@ -1,0 +1,16 @@
+<aside id='tooltip' tabindex='-1' role='tooltip' aria-hidden='true'>
+  {{#if this.activeTooltip}}
+    <div
+      class='tooltip-container'
+      data-tooltip='tooltip'
+      {{on 'mouseenter' this.handleMouseEnter}}
+      {{on 'mouseleave' this.handleMouseLeave}}
+    >
+      <h4 data-tooltip='tooltip'>{{this.activeTooltip.title}}</h4>
+      <p
+        data-tooltip='tooltip'
+        class='tooltip-text'
+      >{{this.activeTooltip.text}}</p>
+    </div>
+  {{/if}}
+</aside>

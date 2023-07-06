@@ -10,15 +10,7 @@
 <Application::Sidebar::Left @expanded={{this.expanded}} />
 <Application::Sidebar::Right @expanded={{this.expanded}} />
 
-<aside id='tooltip' tabindex='-1' role='tooltip' aria-hidden='true'>
-  {{#if this.activeTooltip}}
-    <Application::Tooltip
-      @title={{this.activeTooltip.title}}
-      @text={{this.activeTooltip.text}}
-      @article={{this.activeTooltip.article}}
-    />
-  {{/if}}
-</aside>
+<Features::Tooltip />
 
 <dialog id='modal' {{on 'cancel' this.handleModalCancel}}>
   {{#if this.activeModalType}}

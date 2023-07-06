@@ -1,7 +1,7 @@
-import Service, { service } from '@ember/service';
+import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { ConfirmModalOptions } from 'new-horizons-client/components/modal/confirm';
-import UtilityService from './utility';
+import { sleep } from 'new-horizons-client/utilities/misc.utility';
 
 export enum ModalType {
   confirm = 'confirm',
@@ -9,8 +9,6 @@ export enum ModalType {
 }
 
 export default class ModalService extends Service {
-  @service declare utility: UtilityService;
-
   @tracked activeModalType: ModalType | null = null;
   @tracked activeModalOptions: object | null = null;
   timeToDestroy = 300;
@@ -42,7 +40,7 @@ export default class ModalService extends Service {
   async close() {
     document.documentElement.style.setProperty('--modal-opacity', '0');
     document.documentElement.style.setProperty('--modal-scale', '0');
-    await this.utility.sleep(this.timeToDestroy);
+    await sleep(this.timeToDestroy);
     this.getModalContainer().close();
     this.activeModalType = null;
     this.activeModalOptions = null;

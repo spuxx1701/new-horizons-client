@@ -2,7 +2,7 @@
   <label class='dropdown-label' for='{{this.componentId}}-button'><p
     >{{@label}}</p>
     {{#if (and @infoTitle @infoText)}}
-      <Common::Control::TooltipButton
+      <Features::Tooltip::Button
         @title={{@infoTitle}}
         @text={{@infoText}}
         @article={{@infoArticle}}

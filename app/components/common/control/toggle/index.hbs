@@ -5,7 +5,7 @@
     for='{{this.componentId}}-input'
   ><p>{{@label}}</p>
     {{#if (and @infoTitle @infoText)}}
-      <Common::Control::TooltipButton
+      <Features::Tooltip::Button
         @title={{@infoTitle}}
         @text={{@infoText}}
         @article={{@infoArticle}}

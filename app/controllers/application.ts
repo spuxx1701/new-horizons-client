@@ -31,10 +31,6 @@ export default class ApplicationController extends Controller {
     event.preventDefault();
   }
 
-  get activeTooltip() {
-    return this.tooltip.activeTooltip;
-  }
-
   @action toggleLeftSidebar() {
     this.leftSidebarExpanded = !this.leftSidebarExpanded;
     const leftSidebar = document.getElementById('sidebar-left') as HTMLElement;

@@ -1,8 +1,9 @@
 import { action } from '@ember/object';
-import Service, { service } from '@ember/service';
+import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import * as bootstrap from 'bootstrap';
-import UtilityService from './utility';
+import { tooltipConfig } from 'new-horizons-client/config/tooltip.config';
+import { sleep } from 'new-horizons-client/utilities/misc.utility';
 
 export interface Tooltip {
   source: HTMLElement;
@@ -11,11 +12,10 @@ export interface Tooltip {
   article?: string;
 }
 
-export const TOOLTIP_CLOSE_DELAY = 500;
-
+/**
+ * `TooltipService` allows and controls the rendering of tooltips.
+ */
 export default class TooltipService extends Service {
-  @service declare utility: UtilityService;
-
   @tracked activeTooltip: Tooltip | undefined;
   @tracked isHovering = false;
   @tracked isClicked = false;
@@ -24,9 +24,8 @@ export default class TooltipService extends Service {
   tooltip: bootstrap.Tooltip;
   root: HTMLElement;
 
-  constructor() {
-    // eslint-disable-next-line prefer-rest-params
-    super(...arguments);
+  constructor(properties?: object | undefined) {
+    super(properties);
     this.tooltipElement = document.getElementById('tooltip') as HTMLElement;
     if (!this.tooltipElement) {
       throw new Error(
@@ -43,6 +42,13 @@ export default class TooltipService extends Service {
     });
   }
 
+  /**
+   * Shows the tooltip near the given element.
+   * @param element The element that serves as the anchor for the tooltip.
+   * @param title The tooltip title.
+   * @param text The tooltip text.
+   * @param article (optional) The Stellarpedia article the tooltip should link to.
+   */
   @action show(
     element: HTMLElement,
     title: string,
@@ -55,7 +61,11 @@ export default class TooltipService extends Service {
     this.tooltip.show();
   }
 
-  positionAtElement(element: HTMLElement) {
+  /**
+   * Positions the tooltip at the given element.
+   * @param element The element.
+   */
+  private positionAtElement(element: HTMLElement) {
     const elementRect = element.getBoundingClientRect();
     const top = elementRect.top;
     const bottom = window.innerHeight - elementRect.bottom;
@@ -82,15 +92,23 @@ export default class TooltipService extends Service {
     }
   }
 
+  /**
+   * Hides the tooltip if the given element is the current tooltip's
+   * anchor element.
+   * @param element The tooltip's anchor element.
+   */
   @action async hide(element: HTMLElement) {
     if (element === this.activeTooltip?.source) {
       this.forceHide();
     }
   }
 
+  /**
+   * Forcefully hides the tooltip.
+   */
   async forceHide() {
     this.root.style.setProperty('--tooltip-opacity', '0');
-    await this.utility.sleep(200);
+    await sleep(tooltipConfig.tooltipHideTime);
     this.tooltip.hide();
     this.activeTooltip = undefined;
   }
