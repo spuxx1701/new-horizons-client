@@ -1,8 +1,8 @@
-import Service, { service } from '@ember/service';
-import { v4 as uuidv4 } from 'uuid';
+import { service } from '@ember/service';
+import { default as IntlService } from 'ember-intl/services/intl';
 // import { TOptions } from 'ember-intl/services/intl';
 
-export default class UtilityService extends Service {
+export default class CustomIntl extends IntlService {
   @service declare intl: any;
   // TODO: Temporarily don't include type information since ember-intl has type errors:
   // https://github.com/ember-intl/ember-intl/issues/1732

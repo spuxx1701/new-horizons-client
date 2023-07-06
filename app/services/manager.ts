@@ -2,13 +2,12 @@ import { action } from '@ember/object';
 import Service, { service } from '@ember/service';
 import GeneratorService from './generator';
 import RendererService from './renderer';
-import UtilityService from './utility';
 import ENV from 'new-horizons-client/config/environment';
+import CustomIntl from './custom-intl';
 
 export default class ManagerService extends Service {
   @service declare renderer: RendererService;
-  @service declare intl: any;
-  @service declare utility: UtilityService;
+  @service declare intl: CustomIntl;
   @service declare generator: GeneratorService;
 
   @action initialize() {
@@ -22,7 +21,7 @@ export default class ManagerService extends Service {
 
   @action handleBeforeUnload() {
     if (this.generator.character) {
-      return this.utility.translate('misc.warn-unsaved-changes');
+      return this.intl.translate('misc.warn-unsaved-changes');
     } else {
       return null;
     }

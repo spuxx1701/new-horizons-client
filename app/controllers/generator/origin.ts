@@ -7,10 +7,10 @@ import Origin from 'new-horizons-client/game-objects/character/origin';
 import { GeneratorOriginRouteModel } from 'new-horizons-client/routes/generator/origin';
 import GeneratorService from 'new-horizons-client/services/generator';
 import ModalService from 'new-horizons-client/services/modal';
-import UtilityService from 'new-horizons-client/services/utility';
+import CustomIntl from 'new-horizons-client/services/custom-intl';
 
 export default class GeneratorOriginController extends Controller {
-  @service declare utility: UtilityService;
+  @service declare intl: CustomIntl;
   @service declare generator: GeneratorService;
   @service declare router: RouterService;
   @service declare modal: ModalService;
@@ -20,7 +20,7 @@ export default class GeneratorOriginController extends Controller {
   get originOptions() {
     return this.model.origins.map((origin) => {
       return {
-        label: this.utility.translate(origin.id),
+        label: this.intl.translate(origin.id),
         data: origin,
       } as DropdownOption;
     });
@@ -48,7 +48,7 @@ export default class GeneratorOriginController extends Controller {
       skillOptions.push({
         options: skillOption.options.map((value) => {
           return {
-            label: `${this.utility.translate(value)} +${skillOption.level}`,
+            label: `${this.intl.translate(value)} +${skillOption.level}`,
             data: { id: value, index, level: skillOption.level },
           } as DropdownOption;
         }),
@@ -73,10 +73,8 @@ export default class GeneratorOriginController extends Controller {
 
   @action handleSubmit() {
     this.modal.confirm({
-      title: this.utility.translate(
-        'generator.origin.modal.submit-origin.title'
-      ),
-      content: `<p>${this.utility.translate(
+      title: this.intl.translate('generator.origin.modal.submit-origin.title'),
+      content: `<p>${this.intl.translate(
         'generator.origin.modal.submit-origin.text'
       )}</p>`,
       onSubmit: this.submit,
